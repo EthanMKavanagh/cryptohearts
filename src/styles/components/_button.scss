@@ -1,0 +1,69 @@
+.button {
+  @extend .no-select;
+  display: inline-block;
+  cursor: pointer;
+  color: $color-white;
+  background: #3772ff;
+  font-family: $PrimaryFont;
+  border: 2px solid $color-white;
+  border-radius: 90px;
+  padding: 12px 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  white-space: pre;
+  transition: all ease-in-out 0.1s;
+  // margin-top: -2px; // box shadow
+  // box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    // border-color: $color-secondary;
+    transition: all ease-in-out 0.1s;
+    transform: scale(1.03);
+  }
+
+  &--light {
+    color: $color-dark;
+    background: $color-white;
+    border: 2px solid #e6e8ec;
+  }
+
+  &--danger {
+    border: 1px solid crimson;
+    color: $color-white;
+    background: crimson;
+
+    &:hover {
+      color: crimson;
+      background: $color-white;
+      transition: background 0.2s ease-in-out;
+    }
+  }
+
+  @media screen and (max-width: $tab-land) {
+    white-space: normal;
+  }
+
+  @media screen and (max-width: $phone) {
+    font-size: 0.9rem;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 5px;
+
+  @media screen and (max-width: $phone - 100) {
+    align-items: center;
+    flex-direction: column;
+  }
+}

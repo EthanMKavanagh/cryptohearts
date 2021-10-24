@@ -1,0 +1,377 @@
+.navbar-placeholder {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  padding: 20px 0;
+  height: 40px; // + padding 40px
+  z-index: 99;
+  background: $color-bg;
+  transition: top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &.animate {
+    // top: -80px;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+      rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+
+  &.sticky {
+    top: 0;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+}
+
+.navbar {
+  top: 0;
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  height: 40px; // + padding 40px
+  z-index: 99;
+  background: $color-bg;
+  transition: top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  &__logo {
+    margin-left: 20px;
+    display: flex;
+    font-weight: 700;
+    font-size: 1rem;
+    white-space: pre;
+  }
+
+  .connect-wallet {
+    // width: 200px;
+    text-align: right;
+    margin-right: 20px;
+
+    img {
+      margin-top: 2px;
+    }
+  }
+
+  .navbar-buttons {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    gap: 20px;
+
+    .search {
+      display: flex;
+      align-items: center;
+      border: 2px solid #e6e8ec;
+      border-radius: 8px;
+      padding-right: 20px;
+
+      input {
+        max-width: 120px;
+      }
+    }
+
+    .bell {
+      // position: relative;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+
+      &__circle {
+        width: 14px;
+        height: 14px;
+        margin-top: -24px;
+        border-radius: 50%;
+        background-color: #45b26b;
+      }
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend .no-select;
+  }
+
+  &__overlay {
+    // button is 1rem higher & wider than background
+    // height: 100%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    // starts at top-right spanning over the entire viewport because of full height & width when checked
+    top: 0;
+    left: 100%;
+    background: $color-dark;
+    z-index: 1000;
+    // for using custom timing cubic-bezier INFO: easings.net / cubic-bezier.com
+    transition: left 0.4s cubic-bezier(0.86, 0, 0.07, 1); // easeInOutQuint
+
+    .nav {
+      padding: 80px 120px 30px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE 10+ */
+      ::-webkit-scrollbar-track {
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        background-color: transparent;
+      }
+      ::-webkit-scrollbar {
+        width: 3px !important;
+        background-color: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+      }
+
+      @media screen and (max-width: $phone) {
+        padding-right: 60px;
+        padding-left: 60px;
+
+        &__link {
+          font-size: 1rem;
+        }
+      }
+
+      @media screen and (max-width: $phone - 100) {
+        padding-right: 30px;
+        padding-left: 30px;
+
+        &__link {
+          font-size: 1rem;
+        }
+      }
+
+      .navbar-item {
+        cursor: pointer;
+        position: relative;
+        font-size: 1.4rem;
+        transition: color 0.1s ease;
+        display: flex;
+        flex-direction: column;
+
+        .navbar-link {
+          text-decoration: none;
+          color: $color-white;
+          padding: 20px 0;
+          width: 100%;
+          letter-spacing: -0.7px;
+          font-size: 1rem;
+
+          &:hover {
+            color: $color-light-grey;
+          }
+
+          @media screen and (max-width: $phone - 100) {
+            padding: 15px 0px;
+          }
+
+          .dropdown-arrow {
+            position: absolute;
+            right: 0;
+            margin-top: 9px;
+            margin-left: 5px;
+          }
+        }
+
+        .navbar-dropdown {
+          cursor: default;
+          padding: 14px 0;
+          border-radius: 12px;
+          display: flex;
+          flex-direction: column;
+          top: 100%;
+          left: 0;
+          width: 200px;
+          opacity: 1;
+          display: none;
+
+          &__item {
+            font-size: 0.95rem;
+            color: $color-white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 28px;
+            transition: none;
+
+            &:hover {
+              background: rgba(0, 0, 0, 0.9);
+              color: #555;
+            }
+          }
+        }
+      }
+
+      &__link {
+        color: $color-white;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 20px 0px;
+        letter-spacing: -0.7px;
+        font-size: 1rem;
+        transition: color 0.1s ease;
+
+        &:hover {
+          color: #555;
+        }
+
+        @media screen and (max-width: $phone) {
+          font-size: 1rem;
+        }
+
+        @media screen and (max-width: $phone - 100) {
+          padding: 15px 0px;
+        }
+      }
+    }
+  }
+
+  &__checkbox:checked ~ &__overlay {
+    left: -1px;
+  }
+
+  &__checkbox:checked ~ &__button {
+    position: fixed !important;
+  }
+
+  &__icon {
+    position: relative;
+
+    // Create Lines
+    &,
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2px;
+      background-color: $color-dark;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.6rem; // move up
+    }
+
+    &::after {
+      top: 0.6rem; // move down
+    }
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+    background-color: $color-white;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+    background-color: $color-white;
+  }
+
+  @media screen and (max-width: $tab-land) {
+    justify-content: flex-start;
+  }
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 480px;
+  text-align: center;
+  border-radius: 100px;
+  margin-top: 2px;
+  padding: 2px 30px;
+  padding-left: 0;
+
+  @media screen and (max-width: $phone) {
+    display: none;
+  }
+
+  .navbar-item {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      .navbar-dropdown {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease, visibility ease 0.5s, left 0.5s ease;
+      }
+    }
+
+    .navbar-link {
+      text-decoration: none;
+      color: $color-dark;
+      letter-spacing: -0.7px;
+      padding: 10px 15px 12px;
+      height: 100%;
+      font-size: 14px;
+    }
+
+    .navbar-dropdown {
+      cursor: default;
+      position: absolute;
+      background: rgba($color-dark, 0.9);
+      padding: 14px 0;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      top: 100%;
+      left: 50%;
+      width: 200px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.1s ease, visibility ease 0.1s, left 0.2s ease;
+
+      &__item {
+        font-size: 0.9rem;
+        color: $color-white;
+        text-decoration: none;
+        padding: 10px;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+  }
+}

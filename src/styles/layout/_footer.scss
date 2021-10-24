@@ -1,0 +1,59 @@
+.footer {
+  padding: 50px 0;
+
+  .container-80 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      width: 40%;
+    }
+
+    position: relative;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+    img {
+      height: 48px;
+    }
+
+    .footer-buttons {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+
+      .button {
+        background-color: $color-white;
+      }
+
+      @media screen and (max-width: $tab-port) {
+        margin-top: 20px;
+      }
+
+      @media screen and (max-width: $phone - 100) {
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (max-width: $tab-land) {
+      max-width: 90%;
+
+      div {
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width: $tab-port) {
+      max-width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 20px; // same as navbar
+
+      div {
+        width: 100%;
+      }
+    }
+  }
+}

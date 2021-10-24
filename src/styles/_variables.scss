@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+// FONT FAMILY
+// $PrimaryFont: "Inconsolata";
+$PrimaryFont: "Poppins";
+$SerifFont: "DM Sans", sans-serif;
+
+// COLORS
+$color-dark: #23262f;
+$color-white: #f3f3fe;
+$color-primary: #ef640777;
+$color-secondary: #ef6407ff;
+$color-bg: #fcfcfd;
+// $color-blue: #0c2647;
+$color-blue: #161c68;
+$color-dark-grey: #555;
+$color-light-grey: #999;
+
+// FONT SIZES
+$default-font-size: 1rem;
+
+// GRID
+$grid-width: 114rem; // 1140px standard width
+$gutter-vertical: 4rem; // 40px Gutter Y
+$gutter-vertical-small: 3rem; // 30px Gutter Y
+$gutter-horizontal: 2rem; // 20px Gutter X
+
+// MEDIA QUERIES
+$tab-land: 1200px;
+$tab-port: 900px;
+$phone: 600px;

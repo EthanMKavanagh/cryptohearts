@@ -1,0 +1,55 @@
+input {
+  border: none;
+  height: 44px;
+  width: calc(100% - 58px);
+  font-family: $PrimaryFont;
+  border-radius: 100px;
+  padding: 0 28px;
+  color: $color-dark;
+  border: 1px solid #cccccc;
+  transition: all 0.2s ease;
+
+  &:focus {
+    border: 1px solid #3898ec;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &.white {
+    border: none;
+
+    &:focus {
+      border: none;
+    }
+  }
+}
+
+textarea {
+  border: none;
+  resize: none;
+  width: calc(100% - 58px);
+  font-size: 1.1rem;
+  border-radius: 6px;
+  padding: 10px 28px;
+  color: $color-dark;
+  tab-size: 4;
+  transition: border 0.2s ease;
+
+  &.dark {
+    border: 1px solid #cccccc;
+
+    &:focus {
+      border: 1px solid #3898ec;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.form-title {
+  color: $color-dark-grey;
+}

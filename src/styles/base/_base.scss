@@ -1,0 +1,69 @@
+*,
+*:not(img),
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  // max-width: 2400px;
+  margin: auto;
+  background: $color-white;
+  // font-size: 16px;
+  color: $color-primary;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+::selection {
+  color: #fff;
+  background: rgba(#527982, 0.7);
+  // background: rgba($color-dark, 0.7);
+}
+
+@keyframes zoomInAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 100ms 100ms ease, transform 400ms ease;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 100ms 100ms ease, transform 400ms ease;
+  }
+}
+
+@keyframes zoomOutAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.zoomIn {
+  animation: zoomInAnimation 0.3s ease;
+}
+
+.zoomOut {
+  animation: zoomOutAnimation 0.3s ease;
+}
+
+.Toastify__toast {
+  padding: 10px !important;
+  min-height: 24px !important;
+  border-radius: 10px !important;
+}
+
+.Toastify__toast-body {
+  font-family: $PrimaryFont;
+  font-size: 0.9rem;
+}
