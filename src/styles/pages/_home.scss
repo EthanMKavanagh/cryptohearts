@@ -1,3 +1,22 @@
+.home-wrapper {
+  position: relative;
+
+  .topology {
+    position: absolute;
+    right: 0;
+    bottom: -140px;
+    z-index: 1;
+
+    @media screen and (max-width: $tab-port) {
+      bottom: -100px;
+    }
+
+    @media screen and (max-width: $phone) {
+      bottom: -70px;
+    }
+  }
+}
+
 .home {
   position: relative;
   margin-top: 80px; // header is 80px
@@ -8,15 +27,7 @@
   min-height: 400px;
   background-position: top;
   background-size: cover;
-
-  .lion-group {
-    margin-top: 80px;
-
-    img {
-      max-width: 100%;
-      min-height: auto;
-    }
-  }
+  z-index: 2;
 
   .container-80 {
     position: relative;
@@ -169,6 +180,17 @@
 
 .meet-the-artists {
   margin: 50px 0;
+  position: relative;
+
+  .side-image {
+    position: absolute;
+    top: 36%;
+    left: 0px;
+
+    @media screen and (max-width: $tab-land + 400) {
+      left: -40px;
+    }
+  }
 
   h1 {
     font-family: $SerifFont;
@@ -181,6 +203,7 @@
     max-width: 80%;
     margin-right: auto;
     margin-left: auto;
+    z-index: 2;
 
     .artists {
       display: flex;
@@ -249,6 +272,12 @@
 
 .causes-we-support {
   margin: 50px 0;
+  position: relative;
+
+  .side-topology {
+    position: absolute;
+    top: 0;
+  }
 
   h1 {
     font-family: $SerifFont;
