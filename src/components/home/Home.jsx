@@ -6,6 +6,8 @@ import art2 from "../../assets/art2.png";
 import art3 from "../../assets/art3.png";
 import art4 from "../../assets/art4.png";
 import Support from "./Support";
+import Team from "./Team";
+import Store from "./Store";
 
 const Home = () => {
   return (
@@ -39,12 +41,12 @@ const Home = () => {
           {/* right */}
           <div className="art-container">
             <div>
-              <img src={art1} />
-              <img src={art2} />
+              <img src={art1} alt="art" />
+              <img src={art2} alt="art" />
             </div>
             <div>
-              <img src={art3} />
-              <img src={art4} />
+              <img src={art3} alt="art" />
+              <img src={art4} alt="art" />
             </div>
           </div>
         </div>
@@ -59,6 +61,18 @@ const Home = () => {
       <div id="causes-we-support" className="causes-we-support">
         <div className="container-80">
           <Support />
+        </div>
+      </div>
+
+      <div id="our-team" className="our-team">
+        <div className="container-80">
+          <Team />
+        </div>
+      </div>
+
+      <div className="store">
+        <div className="container-80">
+          <Store />
         </div>
       </div>
     </Layout>

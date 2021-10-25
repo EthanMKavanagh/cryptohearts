@@ -1,10 +1,80 @@
 .footer {
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 30px;
 
   .container-80 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
+    &.divider {
+      margin: 30px 0;
+    }
+
+    .footer-copyright {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .copyright-text {
+        font-size: 14px;
+        color: #777e90;
+      }
+
+      .cookie {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end;
+
+        .cookie-text,
+        .cookie-accept {
+          font-size: 14px;
+          color: #777e90;
+        }
+
+        .cookie-accept {
+          color: #3772ff;
+          font-weight: 600;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      @media screen and (max-width: $tab-port) {
+        flex-direction: column;
+
+        .cookie {
+          margin-top: 10px;
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    .brand {
+      width: 30%;
+      &__logo {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-left: 10px;
+          font-weight: 600;
+          font-family: $PrimaryFont;
+          font-size: 24px;
+        }
+      }
+
+      h4 {
+        font-family: $PrimaryFont;
+        margin-top: 20px;
+        margin-left: 2px;
+        font-weight: 400;
+        line-height: 28px;
+        font-size: 22px;
+      }
+    }
 
     div {
       width: 40%;
@@ -19,10 +89,84 @@
       height: 48px;
     }
 
-    .footer-buttons {
+    .footer-menu {
+      width: 70%;
       display: flex;
-      flex-direction: column;
-      max-width: 300px;
+      justify-content: flex-end;
+      gap: 30px;
+
+      .menu {
+        max-width: 150px;
+        cursor: default;
+
+        .heading {
+          font-weight: 500;
+          font-size: 18px;
+        }
+
+        &.newsletter {
+          max-width: 250px;
+        }
+
+        ul {
+          margin-top: 30px;
+
+          li {
+            list-style-type: none;
+            font-family: $SerifFont;
+            color: #777e90;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 10px 0;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .form-container {
+          margin-top: 30px;
+          width: 100%;
+
+          p {
+            font-size: 14px;
+            color: #23262f;
+          }
+
+          .form {
+            margin-top: 20px;
+            display: flex;
+            position: relative;
+            gap: 10px;
+            border: 2px solid #e6e8ec;
+            border-radius: 100px;
+
+            input {
+              padding-left: 14px;
+            }
+
+            .form-submit {
+              width: 44px;
+              height: 36px;
+              background-color: #3772ff;
+              border: none;
+              outline: none;
+              margin-top: 5px;
+              margin-right: 5px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+
+              @media screen and (max-width: $tab-port) {
+                width: 40px;
+              }
+            }
+          }
+        }
+      }
 
       .button {
         background-color: $color-white;
@@ -39,17 +183,40 @@
 
     @media screen and (max-width: $tab-land) {
       max-width: 90%;
+      flex-direction: column;
+
+      .brand {
+        width: 100%;
+      }
+
+      .footer-menu {
+        justify-content: flex-start;
+        margin-top: 30px;
+        width: 100%;
+      }
 
       div {
         width: 50%;
       }
     }
 
-    @media screen and (max-width: $tab-port) {
+    @media screen and (max-width: $phone + 100) {
       max-width: 100%;
       flex-direction: column;
       align-items: flex-start;
       padding: 0 20px; // same as navbar
+
+      .footer-menu {
+        justify-content: flex-start;
+        margin-top: 30px;
+        width: 100%;
+
+        flex-direction: column;
+
+        .menu {
+          max-width: 100% !important;
+        }
+      }
 
       div {
         width: 100%;

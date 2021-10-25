@@ -24,6 +24,15 @@ input {
       border: none;
     }
   }
+
+  &.transparent {
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      border: none;
+    }
+  }
 }
 
 textarea {

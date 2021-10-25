@@ -1,5 +1,4 @@
 import React from "react";
-import WalletUnconnected from "../assets/wallet_unconnected.svg";
 
 const SearchIcon = () => (
   <svg

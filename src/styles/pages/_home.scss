@@ -192,6 +192,8 @@
         background: #fcfcfd;
         box-shadow: 0px 61.1343px 61.1343px -45.8507px rgba(31, 47, 70, 0.12);
         border-radius: 19.1045px;
+        padding: 30px 15px;
+        padding-top: 0;
 
         img {
           border-radius: 19.1045px;
@@ -258,6 +260,10 @@
     width: 80%;
     margin: auto;
     margin-bottom: 50px;
+    text-align: center;
+    font-family: $SerifFont;
+    color: #7685ac;
+    font-size: 16px;
   }
 
   .container-80 {
@@ -269,6 +275,7 @@
     .supports {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
 
       .support {
@@ -337,5 +344,220 @@
       max-width: 100%;
       padding: 0 20px; // same as navbar
     }
+  }
+}
+
+.our-team {
+  margin: 50px 0;
+
+  h1 {
+    font-family: $SerifFont;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  p {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: $SerifFont;
+    font-size: 20px;
+    color: #365370;
+  }
+
+  .container-80 {
+    position: relative;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+
+      .member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 200px;
+        text-align: center;
+
+        a {
+          font-family: $SerifFont;
+          font-size: 18px;
+          font-weight: 500;
+          color: #333672;
+          // text-decoration: underline;
+        }
+
+        span {
+          font-family: $SerifFont;
+          font-size: 18px;
+          font-weight: 500;
+          // text-transform: uppercase;
+        }
+
+        img {
+          border-radius: 50%;
+          margin-bottom: 20px;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      @media screen and (max-width: $tab-land) {
+        justify-content: center;
+        gap: 30px;
+      }
+    }
+
+    @media screen and (max-width: $tab-land) {
+      max-width: 90%;
+    }
+
+    @media screen and (max-width: $tab-port) {
+      max-width: 100%;
+      padding: 0 20px; // same as navbar
+    }
+  }
+}
+
+.store {
+  padding-top: 50px;
+  background: url("../../assets/store-background.png"),
+    linear-gradient(0deg, rgba(185, 0, 76, 0.29), rgba(185, 0, 76, 0.29)),
+    url("../../assets/store-background.png");
+  min-height: 600px;
+  background-position: top;
+  background-size: cover;
+
+  .heading {
+    font-family: $SerifFont;
+    margin-bottom: 50px;
+    color: #fff;
+    width: 80%;
+  }
+
+  p {
+    margin-bottom: 100px;
+    font-family: $SerifFont;
+    font-size: 18px;
+    color: #fff;
+    width: 80%;
+  }
+
+  .container-80 {
+    position: relative;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    // gap: 80px;
+
+    .image-container {
+      margin: 50px 0;
+
+      &.left-indent {
+        width: 80%;
+      }
+
+      &.right-indent {
+        margin-left: calc(20%);
+        margin-top: calc(30%);
+      }
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .image-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+        span {
+          color: #fff;
+          text-transform: uppercase;
+        }
+
+        span:nth-child(1) {
+          font-family: $Lato;
+          font-size: 20px;
+          font-weight: 900;
+
+          @media screen and (max-width: $tab-land) {
+            font-size: 16px;
+          }
+        }
+
+        span:nth-child(2) {
+          font-family: $Montserrat;
+          font-size: 13px;
+          cursor: pointer;
+          white-space: pre;
+        }
+      }
+    }
+
+    .left {
+      width: 50%;
+    }
+
+    .right {
+      width: 50%;
+    }
+
+    @media screen and (max-width: $tab-land) {
+      max-width: 90%;
+    }
+
+    @media screen and (max-width: $tab-port) {
+      max-width: 100%;
+      padding: 0 20px; // same as navbar
+      flex-direction: column;
+      align-items: center;
+
+      .heading,
+      p {
+        width: 100%;
+      }
+
+      .image-container {
+        &.left-indent {
+          width: 100%;
+        }
+
+        &.right-indent {
+          margin-left: 0;
+        }
+      }
+
+      .left {
+        width: 80%;
+      }
+
+      .right {
+        width: 80%;
+      }
+    }
+
+    @media screen and (max-width: $phone) {
+      .left {
+        width: 100%;
+      }
+
+      .right {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tab-port) {
+    background-position: left;
   }
 }

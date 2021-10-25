@@ -83,7 +83,7 @@ const Artists = () => {
       <h1>Meet the Artists</h1>
       <div className="artists">
         <div className="artist">
-          <img src={artist1} />
+          <img src={artist1} alt="artist" />
           <p>Amazing digital art</p>
           <DividerIcon />
           <div className="learn-more">
@@ -94,7 +94,7 @@ const Artists = () => {
           </div>
         </div>
         <div className="artist">
-          <img src={artist2} />
+          <img src={artist2} alt="artist" />
           <p>Amazing digital art</p>
           <DividerIcon />
           <div className="learn-more">
@@ -105,7 +105,7 @@ const Artists = () => {
           </div>
         </div>
         <div className="artist">
-          <img src={artist3} />
+          <img src={artist3} alt="artist" />
           <p>Amazing digital art</p>
           <DividerIcon />
           <div className="learn-more">
@@ -116,7 +116,7 @@ const Artists = () => {
           </div>
         </div>
         <div className="artist">
-          <img src={artist4} />
+          <img src={artist4} alt="artist" />
           <p>Amazing digital art</p>
           <DividerIcon />
           <div className="learn-more">
@@ -127,7 +127,7 @@ const Artists = () => {
           </div>
         </div>
         <div className="artist">
-          <img src={artist5} />
+          <img src={artist5} alt="artist" />
           <p>Amazing digital art</p>
           <DividerIcon />
           <div className="learn-more">

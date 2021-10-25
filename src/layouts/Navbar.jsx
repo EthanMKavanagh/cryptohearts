@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ConnectWallet from "../components/ConnectWallet";
-import Logo from "../logo.svg";
-import { useUser } from "../contexts";
 
 const DividerIcon = () => (
   <svg
@@ -20,10 +18,6 @@ const DividerIcon = () => (
 
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(0);
-  const location = useLocation();
-  const [user] = useUser();
-
-  const isAdmin = location.pathname.startsWith("/dashboard");
 
   const openModal = () => {
     const modal = document.getElementById("modal-btn");
@@ -88,17 +82,45 @@ const Navbar = () => {
 
       <nav className="navbar-menu w-auto">
         <div className="navbar-item">
-          <Link to="/" className="navbar-link">
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="navbar-link"
+          >
             Discover
           </Link>
         </div>
         <div className="navbar-item">
-          <Link to="/" className="navbar-link">
+          <Link
+            to="#meet-the-artists"
+            onClick={() => {
+              const element = document.getElementById("meet-the-artists");
+              if (element) {
+                window.scrollTo({
+                  top: element.offsetTop - 120,
+                  behavior: "smooth",
+                });
+              }
+            }}
+            className="navbar-link"
+          >
             Meet the Artists
           </Link>
         </div>
         <div className="navbar-item">
-          <Link to="/" className="navbar-link">
+          <Link
+            to="#causes-we-support"
+            onClick={() => {
+              const element = document.getElementById("causes-we-support");
+              if (element) {
+                window.scrollTo({
+                  top: element.offsetTop - 120,
+                  behavior: "smooth",
+                });
+              }
+            }}
+            className="navbar-link"
+          >
             Causes We Support
           </Link>
         </div>

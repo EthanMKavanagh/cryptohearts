@@ -34,7 +34,7 @@ const Support = () => {
       <div className="supports">
         <div className="support">
           <div className="transparent-layer">
-            <img src={VerificationIcon} />
+            <img src={VerificationIcon} alt="verification-icon" />
             <span className="heading">She's the first</span>
             <LineIcon />
             <span className="secondary-text">
@@ -45,7 +45,7 @@ const Support = () => {
         </div>
         <div className="support">
           <div className="transparent-layer">
-            <img src={VerificationIcon} />
+            <img src={VerificationIcon} alt="verification-icon" />
             <span className="heading">Too young to wed</span>
             <LineIcon />
             <span className="secondary-text">
@@ -56,7 +56,7 @@ const Support = () => {
         </div>
         <div className="support">
           <div className="transparent-layer">
-            <img src={VerificationIcon} />
+            <img src={VerificationIcon} alt="verification-icon" />
             <span className="heading">Strange cintia</span>
             <LineIcon />
             <span className="secondary-text">
