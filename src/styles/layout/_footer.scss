@@ -81,7 +81,7 @@
     }
 
     position: relative;
-    max-width: 80%;
+    max-width: 70%;
     margin-right: auto;
     margin-left: auto;
 
@@ -179,6 +179,10 @@
       @media screen and (max-width: $phone - 100) {
         max-width: 100%;
       }
+    }
+
+    @media screen and (max-width: 1400px) {
+      max-width: 80%;
     }
 
     @media screen and (max-width: $tab-land) {
