@@ -22,7 +22,7 @@ const Modal = () => {
       <div onClick={closeModal} className="modal">
         <div className="modal-wrap">
           <h2 className="mb-20">Connect your wallet</h2>
-          <p className="mb-10">Please use Phantom Wallet mint your Lions.</p>
+          <p className="mb-10">Please use Phantom Wallet mint.</p>
           <button className="button mb-30">
             <img src={phantomLogo} alt="phantom" />
             Phantom

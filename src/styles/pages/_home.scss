@@ -196,6 +196,7 @@
     font-family: $SerifFont;
     text-align: center;
     margin-bottom: 50px;
+    font-size: 44px;
   }
 
   .container-80 {
@@ -276,13 +277,44 @@
 
   .side-topology {
     position: absolute;
-    top: 0;
+    top: 100%;
+
+    @media screen and (max-width: $tab-land) {
+      height: 40%;
+    }
+
+    @media screen and (max-width: $tab-port) {
+      height: 20%;
+    }
+
+    @media screen and (max-width: $phone + 100) {
+      height: 10%;
+    }
+  }
+
+  .looper {
+    position: absolute;
+    top: -50px;
+    right: 0;
+
+    @media screen and (max-width: $tab-land) {
+      height: 30%;
+    }
+
+    @media screen and (max-width: $tab-port) {
+      height: 20%;
+    }
+
+    @media screen and (max-width: $phone + 100) {
+      height: 10%;
+    }
   }
 
   h1 {
     font-family: $SerifFont;
     text-align: center;
     margin-bottom: 50px;
+    font-size: 44px;
   }
 
   p {
@@ -383,6 +415,7 @@
     font-family: $SerifFont;
     text-align: center;
     margin-bottom: 50px;
+    font-size: 44px;
   }
 
   p {

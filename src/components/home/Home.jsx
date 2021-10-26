@@ -8,6 +8,7 @@ import art4 from "../../assets/art4.png";
 import topology from "../../assets/topology.svg";
 import sideImage from "../../assets/side-image.png";
 import sideTopology from "../../assets/side-topology.svg";
+import looper from "../../assets/looper.svg";
 import Support from "./Support";
 import Team from "./Team";
 import Store from "./Store";
@@ -67,6 +68,7 @@ const Home = () => {
 
       <div id="causes-we-support" className="causes-we-support">
         <img className="side-topology" src={sideTopology} alt="side-topology" />
+        <img className="looper" src={looper} alt="looper" />
         <div className="container-80">
           <Support />
         </div>

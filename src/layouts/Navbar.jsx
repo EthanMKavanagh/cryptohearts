@@ -70,61 +70,63 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <Link
-        to="/"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
-        {/* <img alt="logo" className="navbar__logo" src={Logo} /> */}
-        <span className="navbar__logo">Crypto Heart</span>
-      </Link>
+      <div className="navbar__left">
+        <Link
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          {/* <img alt="logo" className="navbar__logo" src={Logo} /> */}
+          <span className="navbar__logo">Crypto Heart</span>
+        </Link>
 
-      <DividerIcon />
+        <DividerIcon />
 
-      <nav className="navbar-menu w-auto">
-        <div className="navbar-item">
-          <Link
-            to="/"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="navbar-link"
-          >
-            Discover
-          </Link>
-        </div>
-        <div className="navbar-item">
-          <Link
-            to="#meet-the-artists"
-            onClick={() => {
-              const element = document.getElementById("meet-the-artists");
-              if (element) {
-                window.scrollTo({
-                  top: element.offsetTop - 120,
-                  behavior: "smooth",
-                });
-              }
-            }}
-            className="navbar-link"
-          >
-            Meet the Artists
-          </Link>
-        </div>
-        <div className="navbar-item">
-          <Link
-            to="#causes-we-support"
-            onClick={() => {
-              const element = document.getElementById("causes-we-support");
-              if (element) {
-                window.scrollTo({
-                  top: element.offsetTop - 120,
-                  behavior: "smooth",
-                });
-              }
-            }}
-            className="navbar-link"
-          >
-            Causes We Support
-          </Link>
-        </div>
-      </nav>
+        <nav className="navbar-menu w-auto">
+          <div className="navbar-item">
+            <Link
+              to="/"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="navbar-link"
+            >
+              Discover
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
+              to="#meet-the-artists"
+              onClick={() => {
+                const element = document.getElementById("meet-the-artists");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              Meet the Artists
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
+              to="#causes-we-support"
+              onClick={() => {
+                const element = document.getElementById("causes-we-support");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              Causes We Support
+            </Link>
+          </div>
+        </nav>
+      </div>
 
       <div className="connect-wallet hide-lg">
         <ConnectWallet />
@@ -142,32 +144,50 @@ const Navbar = () => {
       <div className="navbar__overlay show-lg">
         <nav onClick={hideNav} className="nav">
           <div className="navbar-item">
-            <Link to="/" className="navbar-link">
-              Home
+            <Link
+              to="/"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="navbar-link"
+            >
+              Discover
             </Link>
           </div>
           <div className="navbar-item">
-            <Link to="/rarity" className="navbar-link">
-              Rarity
+            <Link
+              to="#meet-the-artists"
+              onClick={() => {
+                const element = document.getElementById("meet-the-artists");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              Meet the Artists
             </Link>
           </div>
           <div className="navbar-item">
-            <Link to="/roadmap" className="navbar-link">
-              Roadmap
-            </Link>
-          </div>
-          <div className="navbar-item">
-            <Link to="/mine" className="navbar-link">
-              My Lions
-            </Link>
-          </div>
-          <div className="navbar-item">
-            <Link to="/pride" className="navbar-link">
-              Pride
+            <Link
+              to="#causes-we-support"
+              onClick={() => {
+                const element = document.getElementById("causes-we-support");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              Causes We Support
             </Link>
           </div>
 
-          <div className="divider--dark" />
+          <div className="divider--white" />
 
           <div onClick={() => openModal()} className="nav__link">
             Connect Wallet
