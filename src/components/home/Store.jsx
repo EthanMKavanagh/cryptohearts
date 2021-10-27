@@ -1,7 +1,7 @@
 import React from "react";
-import visual1 from "../../assets/visual1.png";
-import visual2 from "../../assets/visual2.png";
-import visual3 from "../../assets/visual3.png";
+import visual1 from "../../assets/marrie1.jpg";
+import visual2 from "../../assets/marrie2.png";
+import visual3 from "../../assets/marrie3.JPG";
 
 const ArrowIcon = () => (
   <svg
