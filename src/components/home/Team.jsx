@@ -3,6 +3,8 @@ import gbabyEth from "../../assets/gbaby.eth.png";
 import roger from "../../assets/roger.png";
 import richard from "../../assets/richard.png";
 import defijesus from "../../assets/defijesus.png";
+import dewey from "../../assets/dewey.png";
+import kavy from "../../assets/kavy.png";
 
 const Team = () => {
   return (
@@ -58,15 +60,26 @@ const Team = () => {
           <span>Tech - Defijesus </span>
         </div>
         <div className="member">
-          <img src={defijesus} alt="defijesus" />
+          <img src={dewey} alt="dewey" />
           <a
-            href="https://twitter.com/eldefijesus"
+            href="https://twitter.com/0xDewey"
             target="_blank"
             rel="noopener noreferrer"
           >
-            eldefijesus
+            Dewey
           </a>
-          <span>Strategy - Ant</span>
+          <span>Strategy - Dewey</span>
+        </div>
+        <div className="member">
+          <img src={kavy} alt="kavy" />
+          <a
+            href="https://twitter.com/kavy05"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Kavy
+          </a>
+          <span>Strategy - Kavy</span>
         </div>
       </div>
     </>
