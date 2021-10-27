@@ -137,12 +137,46 @@
 
       div {
         display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 20px;
+        width: 100%;
+
+        @media screen and (max-width: $phone) {
+          flex-direction: column;
+        }
       }
 
       img {
+        min-width: 300px;
         width: 100%;
-        max-width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border: 5.80172px solid #f34273;
+
+        @media screen and (max-width: 1800px) {
+          min-width: 200px;
+          height: 200px;
+        }
+
+        @media screen and (max-width: 1400px) {
+          min-width: 150px;
+        }
+
+        @media screen and (max-width: $tab-land) {
+          min-width: 300px;
+          height: 300px;
+        }
+
+        @media screen and (max-width: $tab-port) {
+          min-width: 200px;
+          height: 200px;
+        }
+
+        @media screen and (max-width: $phone) {
+          min-width: 300px;
+          height: auto;
+        }
       }
 
       @media screen and (max-width: $tab-land) {
@@ -225,6 +259,9 @@
 
         img {
           border-radius: 19.1045px;
+          width: 250px;
+          height: 300px;
+          object-fit: cover;
         }
 
         p {
@@ -521,6 +558,10 @@
     font-size: 18px;
     color: #fff;
     width: 80%;
+  }
+
+  .bio-text {
+    margin-bottom: 20px;
   }
 
   .container-80 {

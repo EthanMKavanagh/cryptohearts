@@ -21,8 +21,51 @@ const ArrowIcon = () => (
   </svg>
 );
 
-const Store = () => {
-  return (
+const Store = ({ data }) => {
+  return data ? (
+    <>
+      <div className="left">
+        <h2 className="heading">
+          {data.name} <br />
+        </h2>
+
+        {data.bio.map((text) => (
+          <p className="bio-text">{text}</p>
+        ))}
+      </div>
+      <div className="right">
+        <div className="image-container left-indent">
+          <img src={data.visual2} alt="visual" />
+          <div className="image-text">
+            <span>Visual Complexity</span>
+            <span>
+              Shop Now <ArrowIcon />
+            </span>
+          </div>
+        </div>
+
+        <div className="image-container right-indent">
+          <img src={data.visual3} alt="visual" />
+          <div className="image-text">
+            <span>Visual Complexity</span>
+            <span>
+              Shop Now <ArrowIcon />
+            </span>
+          </div>
+        </div>
+
+        <div className="image-container left-indent">
+          <img src={data.visual1} alt="visual" />
+          <div className="image-text">
+            <span>Visual Complexity</span>
+            <span>
+              Shop Now <ArrowIcon />
+            </span>
+          </div>
+        </div>
+      </div>
+    </>
+  ) : (
     <>
       <div className="left">
         <h2 className="heading">

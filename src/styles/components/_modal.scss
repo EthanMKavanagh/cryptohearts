@@ -35,6 +35,7 @@
   pointer-events: none;
   opacity: 0;
   transition: opacity 350ms ease-in-out;
+  z-index: 99999;
 }
 
 .modal-btn:checked ~ .modal {
@@ -42,18 +43,19 @@
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 350ms ease-in;
+  scrollbar-width: thin;
 }
 
 .modal-wrap {
   position: relative;
   display: block;
   width: 100%;
-  max-width: 450px;
+  max-width: 80%;
   min-height: 300px;
   border-radius: 0.25rem;
-  margin: 0 10px;
+  margin: 50px 10px;
   overflow: hidden;
-  padding: 50px;
+  padding: 5px;
   background-color: #fde7be;
   -ms-flex-item-align: center;
   align-self: center;

@@ -68,7 +68,7 @@ const Team = () => {
           >
             Dewey
           </a>
-          <span>Strategy - Dewey</span>
+          <span>Tech - Dewey</span>
         </div>
         <div className="member">
           <img src={kavy} alt="kavy" />
@@ -79,7 +79,7 @@ const Team = () => {
           >
             Kavy
           </a>
-          <span>Strategy - Kavy</span>
+          <span>Tech - Kavy</span>
         </div>
       </div>
     </>

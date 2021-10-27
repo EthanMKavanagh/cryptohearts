@@ -1,9 +1,5 @@
 import React from "react";
-import artist1 from "../../assets/artist1.png";
-import artist2 from "../../assets/artist2.png";
-import artist3 from "../../assets/artist3.png";
-import artist4 from "../../assets/artist1.png";
-import artist5 from "../../assets/artist5.png";
+import { artists } from "./artists";
 
 const LearnMoreIcon = () => (
   <svg
@@ -77,66 +73,36 @@ const DividerIcon = () => (
   </svg>
 );
 
-const Artists = () => {
+const Artists = ({ setData }) => {
+  const openModal = () => {
+    const modal = document.getElementById("modal-btn");
+    modal.checked = true;
+    document.body.style.overflow = "hidden";
+  };
+
   return (
     <>
       <h1>Meet the Artists</h1>
       <div className="artists">
-        <div className="artist">
-          <img src={artist1} alt="artist" />
-          <p>Amazing digital art</p>
-          <DividerIcon />
-          <div className="learn-more">
-            <div className="learn-more__button">
-              <p>learn more</p>
-              <LearnMoreIcon />
+        {artists.map((artist) => (
+          <div className="artist">
+            <img src={artist.visual1} alt="artist" />
+            <p>{artist.name}</p>
+            <DividerIcon />
+            <div
+              onClick={() => {
+                setData(artist);
+                openModal();
+              }}
+              className="learn-more"
+            >
+              <div className="learn-more__button">
+                <p>learn more</p>
+                <LearnMoreIcon />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="artist">
-          <img src={artist2} alt="artist" />
-          <p>Amazing digital art</p>
-          <DividerIcon />
-          <div className="learn-more">
-            <div className="learn-more__button">
-              <p>learn more</p>
-              <LearnMoreIcon />
-            </div>
-          </div>
-        </div>
-        <div className="artist">
-          <img src={artist3} alt="artist" />
-          <p>Amazing digital art</p>
-          <DividerIcon />
-          <div className="learn-more">
-            <div className="learn-more__button">
-              <p>learn more</p>
-              <LearnMoreIcon />
-            </div>
-          </div>
-        </div>
-        <div className="artist">
-          <img src={artist4} alt="artist" />
-          <p>Amazing digital art</p>
-          <DividerIcon />
-          <div className="learn-more">
-            <div className="learn-more__button">
-              <p>learn more</p>
-              <LearnMoreIcon />
-            </div>
-          </div>
-        </div>
-        <div className="artist">
-          <img src={artist5} alt="artist" />
-          <p>Amazing digital art</p>
-          <DividerIcon />
-          <div className="learn-more">
-            <div className="learn-more__button">
-              <p>learn more</p>
-              <LearnMoreIcon />
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );

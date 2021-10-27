@@ -5,7 +5,6 @@ import Page from "./components/routing/Page";
 import Routes from "./components/routing/Routes";
 import Navbar from "./layouts/Navbar";
 import Footer from "./layouts/Footer";
-import Modal from "./components/modal/Modal";
 import ScrollToTop from "./components/scrollToTop";
 import { ToastContainer } from "react-toastify";
 import { cssTransition } from "react-toastify";
@@ -22,7 +21,7 @@ const App = () => {
       <div className="navbar-placeholder" />
       <ScrollToTop />
       <Navbar />
-      <Modal />
+      {/* <Modal /> */}
       <ToastContainer
         position="top-right"
         autoClose={5000}

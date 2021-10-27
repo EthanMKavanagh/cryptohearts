@@ -1,13 +1,12 @@
 import React from "react";
-import phantomLogo from "../../assets/phantom.svg";
-import discordLogo from "../../assets/discord.svg";
-import twitterLogo from "../../assets/twitter.svg";
+import Store from "../home/Store";
 
-const Modal = () => {
+const Modal = ({ data }) => {
   const closeModal = (e) => {
     if (e.target.classList[0] === "modal") {
       const modal = document.getElementById("modal-btn");
       modal.checked = false;
+      document.body.style.overflow = "auto";
     }
   };
 
@@ -21,7 +20,13 @@ const Modal = () => {
       />
       <div onClick={closeModal} className="modal">
         <div className="modal-wrap">
-          <h2 className="mb-20">Connect your wallet</h2>
+          <div className="store">
+            <div className="container-80">
+              <Store data={data} />
+            </div>
+          </div>
+
+          {/* <h2 className="mb-20">Connect your wallet</h2>
           <p className="mb-10">Please use Phantom Wallet mint.</p>
           <button className="button mb-30">
             <img src={phantomLogo} alt="phantom" />
@@ -47,7 +52,7 @@ const Modal = () => {
             rel="noopener noreferrer"
           >
             <img className="ml-10" src={twitterLogo} alt="twitter" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

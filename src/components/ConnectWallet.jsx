@@ -33,11 +33,6 @@ const BellIcon = () => (
 );
 
 const ConnectWallet = () => {
-  const openModal = () => {
-    const modal = document.getElementById("modal-btn");
-    modal.checked = true;
-  };
-
   return (
     <div className="navbar-buttons">
       <div className="search">
@@ -50,9 +45,7 @@ const ConnectWallet = () => {
       </div>
       <div className="button-group">
         <button className="button">Upload</button>
-        <button onClick={() => openModal()} className="button button--light">
-          Connect Wallet
-        </button>
+        <button className="button button--light">Connect Wallet</button>
       </div>
     </div>
   );
