@@ -69,42 +69,42 @@
         font-family: $SerifFont;
       }
 
-      .mint-button-container {
-        border-radius: 73.1729px;
-        border: 1px solid $color-white;
-        width: 200px;
-        text-align: center;
-        cursor: pointer;
+      // .mint-button-container {
+      //   border-radius: 73.1729px;
+      //   border: 1px solid $color-white;
+      //   width: 200px;
+      //   text-align: center;
+      //   cursor: pointer;
 
-        div {
-          border-radius: 73.1729px;
-          border: 1px solid $color-white;
-          margin: 8px;
-        }
+      //   div {
+      //     border-radius: 73.1729px;
+      //     border: 1px solid $color-white;
+      //     margin: 8px;
+      //   }
 
-        .mint-button {
-          color: $color-white;
-          text-transform: uppercase;
-          font-family: $SerifFont;
-          padding: 10px;
-          font-weight: 700;
-          font-size: 1.2rem;
-          background: linear-gradient(
-              90deg,
-              #fedaab 0%,
-              #fca998 25.43%,
-              #f96b80 60.65%,
-              #f84571 86.5%,
-              #f7366b 100%
-            ),
-            linear-gradient(
-              306.64deg,
-              rgba(255, 41, 105, 0.35) 27.07%,
-              rgba(247, 122, 28, 0.35) 71.29%
-            ),
-            #f28f33;
-        }
-      }
+      //   .mint-button {
+      //     color: $color-white;
+      //     text-transform: uppercase;
+      //     font-family: $SerifFont;
+      //     padding: 10px;
+      //     font-weight: 700;
+      //     font-size: 1.2rem;
+      //     background: linear-gradient(
+      //         90deg,
+      //         #fedaab 0%,
+      //         #fca998 25.43%,
+      //         #f96b80 60.65%,
+      //         #f84571 86.5%,
+      //         #f7366b 100%
+      //       ),
+      //       linear-gradient(
+      //         306.64deg,
+      //         rgba(255, 41, 105, 0.35) 27.07%,
+      //         rgba(247, 122, 28, 0.35) 71.29%
+      //       ),
+      //       #f28f33;
+      //   }
+      // }
 
       @media screen and (max-width: $tab-land) {
         .mint-button-container {
@@ -316,7 +316,7 @@
   }
 }
 
-.causes-we-support {
+.get-your-art {
   margin: 50px 0;
   position: relative;
 
@@ -378,13 +378,13 @@
     margin-right: auto;
     margin-left: auto;
 
-    .supports {
+    .mints-options {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
 
-      .support {
+      .mints {
         width: 300px;
         height: 450px;
         margin: 0;
@@ -409,34 +409,62 @@
             url("../../assets/rectangle-blurred.png") #fbfbfc;
 
           display: flex;
-          justify-content: flex-start;
+          justify-content: space-between;
           flex-direction: column;
           align-items: center;
 
-          img {
-            width: 80%;
-            margin-bottom: 20px;
+          .mint-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .secondary-text,
+            a {
+              margin-top: 10px;
+              color: #7b8399;
+              text-align: center;
+              font-size: 16px;
+            }
           }
 
-          .heading {
-            color: #333672;
-            text-transform: uppercase;
-            font-family: $SerifFont;
-            font-weight: 700;
-            font-size: 18px;
-            margin-bottom: 10px;
-          }
-
-          .secondary-text,
-          a {
-            margin-top: 10px;
-            color: #7b8399;
+          .mint-button-container {
+            border-radius: 73.1729px;
+            border: 1px solid $color-white;
+            width: 200px;
             text-align: center;
-            font-size: 14px;
-          }
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-self: flex-end;
 
-          a {
-            text-decoration: underline;
+            div {
+              border-radius: 73.1729px;
+              border: 1px solid $color-white;
+              margin: 8px;
+            }
+
+            .mint-button {
+              color: $color-white;
+              text-transform: uppercase;
+              font-family: $SerifFont;
+              padding: 10px;
+              font-weight: 700;
+              font-size: 1.2rem;
+              background: linear-gradient(
+                  90deg,
+                  #fedaab 0%,
+                  #fca998 25.43%,
+                  #f96b80 60.65%,
+                  #f84571 86.5%,
+                  #f7366b 100%
+                ),
+                linear-gradient(
+                  306.64deg,
+                  rgba(255, 41, 105, 0.35) 27.07%,
+                  rgba(247, 122, 28, 0.35) 71.29%
+                ),
+                #f28f33;
+            }
           }
         }
       }

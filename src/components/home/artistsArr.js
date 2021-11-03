@@ -1,4 +1,4 @@
-export const artists = [
+export const artistsArr = [
   {
     name: "Jeremy Sicile-Kira",
     bio: [
