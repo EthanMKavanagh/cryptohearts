@@ -33,7 +33,7 @@ const Team = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Huaso_Tech
+            @Huaso_Tech
           </a>
           <span>Community Manager - Roger</span>
         </div>
@@ -44,7 +44,7 @@ const Team = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            metahero_5
+            @metahero_5
           </a>
           <span>Strategy - Richard</span>
         </div>
@@ -55,7 +55,7 @@ const Team = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            eldefijesus
+            @eldefijesus
           </a>
           <span>Tech - Defijesus </span>
         </div>
@@ -66,7 +66,7 @@ const Team = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Dewey
+            @Dewey
           </a>
           <span>Tech - Dewey</span>
         </div>
@@ -77,7 +77,7 @@ const Team = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Kavy
+            @Kavy
           </a>
           <span>Tech - Kavy</span>
         </div>
