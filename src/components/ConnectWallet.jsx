@@ -35,17 +35,18 @@ const BellIcon = () => (
 const ConnectWallet = () => {
   return (
     <div className="navbar-buttons">
-      <div className="search">
+      {/* <div className="search">
         <input placeholder="Search" type="text" className="white" />
         <SearchIcon />
-      </div>
-      <div className="bell">
+      </div> */}
+      {/* <div className="bell">
         <BellIcon />
         <span className="bell__circle" />
-      </div>
+      </div> */}
       <div className="button-group">
-        <button className="button">Upload</button>
-        <button className="button button--light">Connect Wallet</button>
+        {/* <button className="button">Upload</button> */}
+        {/* <button className="button button--light">Connect Wallet</button> */}
+        <button className="button">Connect Wallet</button>
       </div>
     </div>
   );

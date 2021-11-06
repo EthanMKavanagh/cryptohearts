@@ -8,12 +8,11 @@ import topology from "../../assets/topology.svg";
 import sideImage from "../../assets/side-image.png";
 import sideTopology from "../../assets/side-topology.svg";
 import looper from "../../assets/looper.svg";
-import Support from "./Support";
 import Team from "./Team";
-import Store from "./Store";
 import Modal from "../modal/Modal";
 import Artists from "./Artists";
 import Mint from "./Mint";
+import Support from "./Support";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -39,12 +38,6 @@ const Home = () => {
                 1,000 randomly generated paintings, visual art, and photography
                 of various rarity.
               </p>
-
-              <div className="mint-button-container">
-                <div>
-                  <div className="mint-button">Mint</div>
-                </div>
-              </div>
             </div>
 
             {/* right */}
@@ -92,9 +85,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="store">
+      <div id="causes-we-support" className="causes-we-support">
         <div className="container-80">
-          <Store />
+          <Support />
         </div>
       </div>
       <Modal data={data} />

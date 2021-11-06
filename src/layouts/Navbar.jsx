@@ -93,6 +93,23 @@ const Navbar = () => {
           </div>
           <div className="navbar-item">
             <Link
+              to="#get-your-art"
+              onClick={() => {
+                const element = document.getElementById("get-your-art");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              Mint
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
               to="#meet-the-artists"
               onClick={() => {
                 const element = document.getElementById("meet-the-artists");
@@ -110,12 +127,29 @@ const Navbar = () => {
           </div>
           <div className="navbar-item">
             <Link
+              to="#our-team"
+              onClick={() => {
+                const element = document.getElementById("our-team");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              Our Team
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
               to="#causes-we-support"
               onClick={() => {
                 const element = document.getElementById("causes-we-support");
                 if (element) {
                   window.scrollTo({
-                    top: element.offsetTop - 120,
+                    top: element.offsetTop - 90,
                     behavior: "smooth",
                   });
                 }

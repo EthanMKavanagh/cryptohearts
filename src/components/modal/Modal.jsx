@@ -1,5 +1,5 @@
 import React from "react";
-import Store from "../home/Store";
+import Store from "../home/Support";
 
 const Modal = ({ data }) => {
   const closeModal = (e) => {

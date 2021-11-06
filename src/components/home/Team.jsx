@@ -59,7 +59,7 @@ const Team = () => {
           </a>
           <span>Tech - Defijesus </span>
         </div>
-        <div className="member">
+        {/* <div className="member">
           <img src={dewey} alt="dewey" />
           <a
             href="https://twitter.com/0xDewey"
@@ -69,7 +69,7 @@ const Team = () => {
             @Dewey
           </a>
           <span>Tech - Dewey</span>
-        </div>
+        </div> */}
         <div className="member">
           <img src={kavy} alt="kavy" />
           <a

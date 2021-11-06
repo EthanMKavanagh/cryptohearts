@@ -534,14 +534,12 @@
           font-size: 18px;
           font-weight: 500;
           color: #333672;
-          // text-decoration: underline;
         }
 
         span {
           font-family: $SerifFont;
           font-size: 18px;
           font-weight: 500;
-          // text-transform: uppercase;
         }
 
         img {
@@ -569,7 +567,7 @@
   }
 }
 
-.store {
+.causes-we-support {
   padding-top: 50px;
   background: url("../../assets/store-background.png"),
     linear-gradient(0deg, rgba(185, 0, 76, 0.29), rgba(185, 0, 76, 0.29)),
@@ -582,7 +580,6 @@
     font-family: $SerifFont;
     margin-bottom: 50px;
     color: #fff;
-    width: 80%;
   }
 
   p {
@@ -617,6 +614,10 @@
         margin-top: calc(30%);
       }
 
+      .left-column {
+        margin-top: 400px;
+      }
+
       img {
         width: 100%;
         max-width: 100%;
@@ -624,13 +625,15 @@
 
       .image-text {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         margin-top: 20px;
+        width: 100%;
 
         span {
           color: #fff;
           text-transform: uppercase;
+          margin: 2px 0;
         }
 
         span:nth-child(1) {
@@ -646,8 +649,13 @@
         span:nth-child(2) {
           font-family: $Montserrat;
           font-size: 13px;
-          cursor: pointer;
-          white-space: pre;
+
+          a {
+            color: #fff;
+            text-align: center;
+            font-size: 13px;
+            text-decoration: underline;
+          }
         }
       }
     }
