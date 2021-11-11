@@ -10,10 +10,7 @@ const Team = () => {
   return (
     <>
       <h1>Our Team</h1>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard
-      </p>
+
       <div className="team">
         <div className="member">
           <img src={gbabyEth} alt="gbabyEth" />
@@ -33,7 +30,7 @@ const Team = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Huaso_Tech
+            @Huaso_Tech
           </a>
           <span>Community Manager - Roger</span>
         </div>
@@ -44,7 +41,7 @@ const Team = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            metahero_5
+            @metahero_5
           </a>
           <span>Strategy - Richard</span>
         </div>
@@ -55,21 +52,21 @@ const Team = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            eldefijesus
+            @eldefijesus
           </a>
           <span>Tech - Defijesus </span>
         </div>
-        <div className="member">
+        {/* <div className="member">
           <img src={dewey} alt="dewey" />
           <a
             href="https://twitter.com/0xDewey"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Dewey
+            @Dewey
           </a>
           <span>Tech - Dewey</span>
-        </div>
+        </div> */}
         <div className="member">
           <img src={kavy} alt="kavy" />
           <a
@@ -77,7 +74,7 @@ const Team = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Kavy
+            @Kavy
           </a>
           <span>Tech - Kavy</span>
         </div>

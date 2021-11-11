@@ -58,7 +58,9 @@
 
 .button-group {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 15px;
   padding: 5px;
 

@@ -1,41 +1,67 @@
 import React from "react";
-import VerificationIcon from "../../assets/VerificationIcon.svg";
+import visual1 from "../../assets/supportartists.png";
+import visual2 from "../../assets/cryptoheart.png";
+import visual3 from "../../assets/rumi.JPG";
 
-// const LineIcon = () => (
-//   <svg
-//     width="47"
-//     height="3"
-//     viewBox="0 0 47 3"
-//     fill="none"
-//     xmlns="http://www.w3.org/2000/svg"
-//   >
-//     <line
-//       x1="46.811"
-//       y1="1.71826"
-//       x2="0.0785751"
-//       y2="1.71826"
-//       stroke="#F5842F"
-//       stroke-width="2"
-//     />
-//   </svg>
-// );
-
-const Support = () => {
-  return (
+const Support = ({ data }) => {
+  return data ? (
     <>
-      <h1>Causes We Support</h1>
-      {/* <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. A laoreet risus
-        sit interdum. Hendrerit dignissim faucibus lacus, eget suspendisse.
-        Libero, ac iaculis pellentesque at nunc ultricies egestas dui. Aliquam
-        sit non sagittis lorem.
-      </p> */}
+      <div className="left">
+        <h2 className="heading">
+          {data.name} <br />
+        </h2>
 
-      <div className="supports">
-        <div className="support">
-          <div className="transparent-layer">
-            <img src={VerificationIcon} alt="verification-icon" />
-            <span className="secondary-text">
+        {data.bio.map((text) => (
+          <p className="bio-text">{text}</p>
+        ))}
+      </div>
+      <div className="right">
+        <div className="image-container left-indent">
+          <img src={data.visual2} alt="visual" />
+          <div className="image-text">
+            <span>Visual Complexity</span>
+          </div>
+        </div>
+
+        <div className="image-container right-indent">
+          <img src={data.visual3} alt="visual" />
+          <div className="image-text">
+            <span>Visual Complexity</span>
+          </div>
+        </div>
+
+        <div className="image-container left-indent">
+          <img src={data.visual1} alt="visual" />
+          <div className="image-text">
+            <span>Visual Complexity</span>
+          </div>
+        </div>
+      </div>
+    </>
+  ) : (
+    <>
+      <div className="left">
+        <h1 className="heading">Causes We Support</h1>
+
+        <div className="image-container left-indent left-column">
+          <div className="left-column">
+            <img src={visual2} alt="visual" />
+            <div className="image-text">
+              <span>Art Studio</span>
+              <span>
+                Crypto Heart IRL studio for individuals with disabilities to
+                connect & create.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="right">
+        <div className="image-container left-indent">
+          <img src={visual1} alt="visual" />
+          <div className="image-text">
+            <span>Artists with Disabilities</span>
+            <span>
               New or Established Artists with disabilities. Artists like Jeremy
               create pieces for museums, large organizations, and nonprofits.
               New Artists that need some love! Marrie is a longtime artist who
@@ -43,21 +69,13 @@ const Support = () => {
             </span>
           </div>
         </div>
-        <div className="support">
-          <div className="transparent-layer">
-            <img src={VerificationIcon} alt="verification-icon" />
-            <span className="secondary-text">
-              Crypto Heart IRL studio for individuals with disabilities to
-              connect & create.
-            </span>
-          </div>
-        </div>
-        <div className="support">
-          <div className="transparent-layer">
-            <img src={VerificationIcon} alt="verification-icon" />
-            <span className="secondary-text">
-              Rumi — Rumi helps individuals with disabilities live independently
-              by connecting them to supportive roommates.
+        <div className="image-container right-indent">
+          <img src={visual3} alt="visual" />
+          <div className="image-text">
+            <span>Rumi</span>
+            <span>
+              Rumi helps individuals with disabilities live independently by
+              connecting them to supportive roommates.
               <a
                 href="https://meetmyrumi.com"
                 target="_blank"

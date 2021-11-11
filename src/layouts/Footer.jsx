@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./Layout";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/cryptoheart.png";
 
 const ArrowIcon = () => (
   <svg
@@ -45,52 +45,9 @@ const Footer = () => {
           <div className="brand">
             <div className="brand__logo">
               <img src={Logo} alt="logo" />
-              <p>crypter</p>
+              <p>Crypto Heart</p>
             </div>
-            <h4>
-              The New Creative <br />
-              Economy.
-            </h4>
-          </div>
-          <div className="footer-menu">
-            <div className="menu">
-              <p className="heading">Crypter.</p>
-              <ul>
-                <li>Discover</li>
-                <li>Connect Wallet</li>
-                <li>Create Item</li>
-              </ul>
-            </div>
-
-            <div className="menu">
-              <p className="heading">Info</p>
-              <ul>
-                <li>Download</li>
-                <li>Demos</li>
-                <li>Support</li>
-              </ul>
-            </div>
-
-            <div className="menu newsletter">
-              <p className="heading">Join Newsletter</p>
-              <div className="form-container">
-                <p>Subscribe our newletter to get ...</p>
-                <form
-                  onSubmit={(e) => console.log("form submitted")}
-                  className="form"
-                >
-                  <input
-                    className="transparent"
-                    type="email"
-                    placeholder="Enter your email"
-                    required
-                  />
-                  <button type="submit" className="form-submit">
-                    <ArrowIcon />
-                  </button>
-                </form>
-              </div>
-            </div>
+            <h4>Helping Artists with Disabilities in the NFT Space.</h4>
           </div>
         </div>
 
@@ -101,12 +58,8 @@ const Footer = () => {
         <div className="container-80">
           <div className="footer-copyright">
             <p className="copyright-text">
-              Copyright © 2021 UI8 LLC. All rights reserved
+              Copyright © 2021 Crypto Hearts™. All rights reserved
             </p>
-            <div className="cookie">
-              <p className="cookie-text">We use cookies for better service.</p>
-              <p className="cookie-accept">Accept</p>
-            </div>
           </div>
         </div>
       </div>

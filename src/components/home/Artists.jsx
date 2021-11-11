@@ -1,5 +1,5 @@
 import React from "react";
-import { artists } from "./artists";
+import { artistsArr } from "./artistsArr";
 
 const LearnMoreIcon = () => (
   <svg
@@ -84,7 +84,7 @@ const Artists = ({ setData }) => {
     <>
       <h1>Meet the Artists</h1>
       <div className="artists">
-        {artists.map((artist) => (
+        {artistsArr.map((artist) => (
           <div className="artist">
             <img src={artist.visual1} alt="artist" />
             <p>{artist.name}</p>

@@ -1,5 +1,5 @@
 import React from "react";
-import Store from "../home/Store";
+import Store from "../home/Support";
 
 const Modal = ({ data }) => {
   const closeModal = (e) => {
@@ -20,7 +20,7 @@ const Modal = ({ data }) => {
       />
       <div onClick={closeModal} className="modal">
         <div className="modal-wrap">
-          <div className="store">
+          <div className="causes-we-support">
             <div className="container-80">
               <Store data={data} />
             </div>
