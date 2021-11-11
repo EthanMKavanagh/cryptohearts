@@ -20,7 +20,7 @@ const Modal = ({ data }) => {
       />
       <div onClick={closeModal} className="modal">
         <div className="modal-wrap">
-          <div className="store">
+          <div className="causes-we-support">
             <div className="container-80">
               <Store data={data} />
             </div>
