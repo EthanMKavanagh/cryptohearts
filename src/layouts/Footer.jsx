@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./Layout";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/cryptoheart.png";
 
 const ArrowIcon = () => (
   <svg

@@ -1,4 +1,6 @@
 import React from "react";
+import twitter from "../assets/twitter.svg";
+import discord from "../assets/discord.svg";
 
 const SearchIcon = () => (
   <svg
@@ -44,8 +46,12 @@ const ConnectWallet = () => {
         <span className="bell__circle" />
       </div> */}
       <div className="button-group">
-        {/* <button className="button">Upload</button> */}
-        {/* <button className="button button--light">Connect Wallet</button> */}
+        <div onClick={() => window.open("https://discord.gg/cbjE75n9")}>
+          <img className="discord" src={discord} alt="discord" />
+        </div>
+        <div onClick={() => window.open("https://twitter.com/CryptoHeart88")}>
+          <img className="twitter" src={twitter} alt="twitter" />
+        </div>
         <button className="button">Connect Wallet</button>
       </div>
     </div>

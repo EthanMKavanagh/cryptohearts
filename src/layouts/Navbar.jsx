@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ConnectWallet from "../components/ConnectWallet";
+import twitter from "../assets/twitter.svg";
+import discord from "../assets/discord.svg";
 
 const DividerIcon = () => (
   <svg
@@ -210,7 +212,7 @@ const Navbar = () => {
                 const element = document.getElementById("causes-we-support");
                 if (element) {
                   window.scrollTo({
-                    top: element.offsetTop - 120,
+                    top: element.offsetTop - 80,
                     behavior: "smooth",
                   });
                 }
@@ -222,6 +224,17 @@ const Navbar = () => {
           </div>
 
           <div className="divider--white" />
+
+          <div>
+            <div onClick={() => window.open("https://discord.gg/cbjE75n9")}>
+              <img className="discord" src={discord} alt="discord" />
+            </div>
+            <div
+              onClick={() => window.open("https://twitter.com/CryptoHeart88")}
+            >
+              <img className="twitter" src={twitter} alt="twitter" />
+            </div>
+          </div>
 
           <div onClick={() => openModal()} className="nav__link">
             Connect Wallet

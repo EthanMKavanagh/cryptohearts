@@ -10,10 +10,7 @@ const Team = () => {
   return (
     <>
       <h1>Our Team</h1>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard
-      </p>
+
       <div className="team">
         <div className="member">
           <img src={gbabyEth} alt="gbabyEth" />

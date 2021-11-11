@@ -1,20 +1,20 @@
 import React from "react";
+import placeholder from "../../assets/placeholder.png";
 
 const Mint = () => {
   return (
     <>
-      <h1>Get Your Art</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. A laoreet risus
-        sit interdum. Hendrerit dignissim faucibus lacus, eget suspendisse.
-        Libero, ac iaculis pellentesque at nunc ultricies egestas dui. Aliquam
-        sit non sagittis lorem.
-      </p>
+      {/* <p>0/10,000 pieces remaining</p> */}
 
       <div className="mints-options">
         <div className="mints">
           <div className="transparent-layer">
             <div className="mint-content">
+              {/* <img
+                src={placeholder}
+                alt="placeholder1"
+                className="placeholder-img"
+              /> */}
               <h3>Single</h3>
               <span className="secondary-text">1 Crypto Heart Artwork</span>
               <span className="secondary-text">0.10 ETH</span>

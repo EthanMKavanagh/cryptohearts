@@ -1,7 +1,7 @@
 import React from "react";
-import visual1 from "../../assets/marrie1.jpg";
-import visual2 from "../../assets/marrie2.png";
-import visual3 from "../../assets/marrie3.JPG";
+import visual1 from "../../assets/supportartists.png";
+import visual2 from "../../assets/cryptoheart.png";
+import visual3 from "../../assets/rumi.JPG";
 
 const Support = ({ data }) => {
   return data ? (
