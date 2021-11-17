@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Layout from "../../layouts/Layout";
 import art1 from "../../assets/art1.jpg";
-import art2 from "../../assets/art2.jpg";
+import art2 from "../../assets/alidaniels.jpg";
 import art3 from "../../assets/art3.jpg";
-import art4 from "../../assets/art4.PNG";
+import art4 from "../../assets/supportartists.png";
 import topology from "../../assets/topology.svg";
 import sideImage from "../../assets/side-image.png";
 import sideTopology from "../../assets/side-topology.svg";
@@ -35,7 +35,7 @@ const Home = () => {
               </p>
 
               <p>
-                1,000 randomly generated paintings, visual art, and photography
+                5,000 randomly generated paintings, visual art, and photography
                 of various rarity.
               </p>
             </div>
@@ -43,8 +43,8 @@ const Home = () => {
             {/* right */}
             <div className="art-container">
               <div>
-                <img src={art1} alt="art" />
                 <img src={art2} alt="art" />
+                <img src={art1} alt="art" />
               </div>
               <div>
                 <img src={art3} alt="art" />
