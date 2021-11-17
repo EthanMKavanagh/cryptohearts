@@ -42,6 +42,11 @@ const Support = ({ data }) => {
     <>
       <div className="left">
         <h2 className="heading">Our Mission</h2>
+        <p className="bio-text">
+          Our mission is to advance the inclusion of artists with disabilities
+          in the metaverse. We believe art will be one of the primary paths
+          forward for individuals with disabilities to express themselves.
+        </p>
 
         <div className="image-container left-indent left-column">
           <div className="left-column">

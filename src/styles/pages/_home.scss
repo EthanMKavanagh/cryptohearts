@@ -722,7 +722,7 @@
 
       @media screen and (min-width: $tab-port) {
         .left-column {
-          margin-top: 50%;
+          margin-top: 30%;
         }
       }
     }
@@ -805,7 +805,7 @@
 
     .accordion {
       cursor: pointer;
-      padding: 18px;
+      padding: 18px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -847,7 +847,7 @@
     .accordion-content {
       height: 100%;
       overflow: hidden;
-      max-height: 1000px;
+      max-height: 2000px;
       transition: max-height 1s ease-in-out;
 
       .accordion-item {

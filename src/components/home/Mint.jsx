@@ -4,6 +4,7 @@ import placeholder from "../../assets/placeholder.png";
 const Mint = () => {
   return (
     <>
+      <h1>Mint</h1>
       {/* <p>0/10,000 pieces remaining</p> */}
 
       <div className="mints-options">
