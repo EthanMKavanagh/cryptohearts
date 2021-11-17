@@ -13,6 +13,7 @@ import Modal from "../modal/Modal";
 import Artists from "./Artists";
 import Mint from "./Mint";
 import Support from "./Support";
+import FAQs from "./FAQs";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -88,6 +89,12 @@ const Home = () => {
       <div id="our-team" className="our-team">
         <div className="container-80">
           <Team />
+        </div>
+      </div>
+
+      <div id="faqs" className="faqs">
+        <div className="container-80">
+          <FAQs />
         </div>
       </div>
 

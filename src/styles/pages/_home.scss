@@ -540,7 +540,12 @@
 
         @media screen and (max-width: $tab-land) {
           text-align: center;
-          max-width: 50%;
+          max-width: 60%;
+        }
+
+        @media screen and (max-width: $phone) {
+          text-align: center;
+          max-width: 80%;
         }
       }
 
@@ -777,5 +782,84 @@
 
   @media screen and (max-width: $tab-port) {
     background-position: left;
+  }
+}
+
+.faqs {
+  margin: 50px 5%;
+
+  h1 {
+    font-family: $SerifFont;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 44px;
+  }
+
+  .accordion-section {
+    display: flex;
+    flex-direction: column;
+
+    .accordion {
+      cursor: pointer;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: none;
+      outline: none;
+    }
+
+    .top {
+      background-image: url(../../assets/side-image.png);
+      background-size: cover;
+    }
+
+    .bottom {
+      background-image: url(../../assets/side-image-opposite.png);
+      background-size: cover;
+    }
+
+    .accordion-title {
+      font-family: $SerifFont;
+      font-weight: 600;
+      font-size: 28px;
+      color: white;
+    }
+
+    .accordion-icon {
+      margin-left: auto;
+      transition: transform 0.4s ease;
+    }
+
+    .rotate {
+      transform: rotate(90deg);
+    }
+
+    .accordion-content {
+      // GET BACKGROUND TO WORK
+      background-color: "#f3f3fe" !important;
+      overflow: hidden;
+      height: 100%;
+
+      // GET TRANSITION TO WORK
+      transition: height 1s ease-in-out;
+
+      .accordion-item {
+        margin: 20px 15px;
+
+        .question-text {
+          font-family: $SerifFont;
+          font-weight: 700;
+          font-size: 22px;
+        }
+
+        .answer-text {
+          font-family: $SerifFont;
+          font-weight: 400;
+          font-size: 18px;
+          padding: 10px;
+        }
+      }
+    }
   }
 }
