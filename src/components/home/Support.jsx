@@ -19,21 +19,21 @@ const Support = ({ data }) => {
         <div className="image-container left-indent">
           <img src={data.visual2} alt="visual" />
           <div className="image-text">
-            <span>Visual Complexity</span>
+            {/* <span>Visual Complexity</span> */}
           </div>
         </div>
 
         <div className="image-container right-indent">
           <img src={data.visual3} alt="visual" />
           <div className="image-text">
-            <span>Visual Complexity</span>
+            {/* <span>Visual Complexity</span> */}
           </div>
         </div>
 
         <div className="image-container left-indent">
           <img src={data.visual1} alt="visual" />
           <div className="image-text">
-            <span>Visual Complexity</span>
+            {/* <span>Visual Complexity</span> */}
           </div>
         </div>
       </div>

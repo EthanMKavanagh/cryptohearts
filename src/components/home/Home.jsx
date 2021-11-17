@@ -56,18 +56,18 @@ const Home = () => {
         <img className="topology" src={topology} alt="topology" />
       </div>
 
+      <div id="meet-the-artists" className="meet-the-artists">
+        {/* <img className="side-image" src={sideImage} alt="side" /> */}
+        <div className="container-80">
+          <Artists setData={setData} />
+        </div>
+      </div>
+
       <div id="get-your-art" className="get-your-art">
         <img className="side-topology" src={sideTopology} alt="side-topology" />
         <img className="looper" src={looper} alt="looper" />
         <div className="container-80">
           <Mint />
-        </div>
-      </div>
-
-      <div id="meet-the-artists" className="meet-the-artists">
-        <img className="side-image" src={sideImage} alt="side" />
-        <div className="container-80">
-          <Artists setData={setData} />
         </div>
       </div>
 
