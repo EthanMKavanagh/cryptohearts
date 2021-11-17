@@ -41,7 +41,7 @@ const Support = ({ data }) => {
   ) : (
     <>
       <div className="left">
-        <h1 className="heading">Causes We Support</h1>
+        <h2 className="heading">Causes We Support</h2>
 
         <div className="image-container left-indent left-column">
           <div className="left-column">
