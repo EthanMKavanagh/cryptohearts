@@ -79,17 +79,18 @@ const Home = () => {
         </div>
       </div> */}
 
+      <div id="causes-we-support" className="causes-we-support">
+        <div className="container-80">
+          <Support />
+        </div>
+      </div>
+
       <div id="our-team" className="our-team">
         <div className="container-80">
           <Team />
         </div>
       </div>
 
-      <div id="causes-we-support" className="causes-we-support">
-        <div className="container-80">
-          <Support />
-        </div>
-      </div>
       <Modal data={data} />
     </Layout>
   );
