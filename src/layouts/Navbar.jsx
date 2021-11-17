@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ConnectWallet from "../components/ConnectWallet";
 import twitter from "../assets/twitter.svg";
 import discord from "../assets/discord.svg";
+import Logo from "../assets/cryptoheart.png";
 
 const DividerIcon = () => (
   <svg
@@ -76,9 +77,10 @@ const Navbar = () => {
         <Link
           to="/"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="navbar__link"
         >
-          {/* <img alt="logo" className="navbar__logo" src={Logo} /> */}
-          <span className="navbar__logo">Crypto Heart</span>
+          <img alt="logo" className="navbar__logo" src={Logo} />
+          <span className="navbar__logo-text">Crypto Heart</span>
         </Link>
 
         <DividerIcon />
@@ -91,23 +93,6 @@ const Navbar = () => {
               className="navbar-link"
             >
               Discover
-            </Link>
-          </div>
-          <div className="navbar-item">
-            <Link
-              to="#get-your-art"
-              onClick={() => {
-                const element = document.getElementById("get-your-art");
-                if (element) {
-                  window.scrollTo({
-                    top: element.offsetTop - 120,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-              className="navbar-link"
-            >
-              Mint
             </Link>
           </div>
           <div className="navbar-item">
@@ -129,6 +114,40 @@ const Navbar = () => {
           </div>
           <div className="navbar-item">
             <Link
+              to="#get-your-art"
+              onClick={() => {
+                const element = document.getElementById("get-your-art");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              Mint
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
+              to="#causes-we-support"
+              onClick={() => {
+                const element = document.getElementById("causes-we-support");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 80,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              Our Mission
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
               to="#our-team"
               onClick={() => {
                 const element = document.getElementById("our-team");
@@ -146,19 +165,19 @@ const Navbar = () => {
           </div>
           <div className="navbar-item">
             <Link
-              to="#causes-we-support"
+              to="#our-team"
               onClick={() => {
-                const element = document.getElementById("causes-we-support");
+                const element = document.getElementById("faqs");
                 if (element) {
                   window.scrollTo({
-                    top: element.offsetTop - 90,
+                    top: element.offsetTop - 120,
                     behavior: "smooth",
                   });
                 }
               }}
               className="navbar-link"
             >
-              Causes We Support
+              FAQ's
             </Link>
           </div>
         </nav>
@@ -207,6 +226,23 @@ const Navbar = () => {
           </div>
           <div className="navbar-item">
             <Link
+              to="#get-your-art"
+              onClick={() => {
+                const element = document.getElementById("get-your-art");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              Mint
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
               to="#causes-we-support"
               onClick={() => {
                 const element = document.getElementById("causes-we-support");
@@ -219,7 +255,41 @@ const Navbar = () => {
               }}
               className="navbar-link"
             >
-              Causes We Support
+              Our Mission
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
+              to="#our-team"
+              onClick={() => {
+                const element = document.getElementById("our-team");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              Our Team
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
+              to="#our-team"
+              onClick={() => {
+                const element = document.getElementById("faqs");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              FAQ's
             </Link>
           </div>
 

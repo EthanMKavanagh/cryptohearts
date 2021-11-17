@@ -6,7 +6,7 @@ const Page = ({ title, ...rest }) => {
   return (
     <>
       <Helmet>
-        <title>{title || "NFT"}</title>
+        <title>Crypto Heart</title>
       </Helmet>
       <Route {...rest} />
     </>

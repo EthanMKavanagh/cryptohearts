@@ -19,21 +19,21 @@ const Support = ({ data }) => {
         <div className="image-container left-indent">
           <img src={data.visual2} alt="visual" />
           <div className="image-text">
-            <span>Visual Complexity</span>
+            {/* <span>Visual Complexity</span> */}
           </div>
         </div>
 
         <div className="image-container right-indent">
           <img src={data.visual3} alt="visual" />
           <div className="image-text">
-            <span>Visual Complexity</span>
+            {/* <span>Visual Complexity</span> */}
           </div>
         </div>
 
         <div className="image-container left-indent">
           <img src={data.visual1} alt="visual" />
           <div className="image-text">
-            <span>Visual Complexity</span>
+            {/* <span>Visual Complexity</span> */}
           </div>
         </div>
       </div>
@@ -41,7 +41,12 @@ const Support = ({ data }) => {
   ) : (
     <>
       <div className="left">
-        <h1 className="heading">Causes We Support</h1>
+        <h2 className="heading">Our Mission</h2>
+        <p className="bio-text">
+          Our mission is to advance the inclusion of artists with disabilities
+          in the metaverse. We believe art will be one of the primary paths
+          forward for individuals with disabilities to express themselves.
+        </p>
 
         <div className="image-container left-indent left-column">
           <div className="left-column">
@@ -49,8 +54,11 @@ const Support = ({ data }) => {
             <div className="image-text">
               <span>Art Studio</span>
               <span>
-                Crypto Heart IRL studio for individuals with disabilities to
-                connect & create.
+                We will launch an IRL studio in Southern California. It will be
+                a supportive studio where individuals can go to create community
+                with other artists, enhance their artistic ability, and
+                represent their work in our gallery. We will provide all the
+                supplies for artists.
               </span>
             </div>
           </div>
@@ -62,20 +70,26 @@ const Support = ({ data }) => {
           <div className="image-text">
             <span>Artists with Disabilities</span>
             <span>
-              New or Established Artists with disabilities. Artists like Jeremy
-              create pieces for museums, large organizations, and nonprofits.
-              New Artists that need some love! Marrie is a longtime artist who
-              has cerebral palsy.
+              We want to work with established artists like Jeremy, who have
+              sold work to museums, collectors, ect, and new artists like
+              Marrie, who are looking to launch their artistic career.
             </span>
           </div>
         </div>
         <div className="image-container right-indent">
-          <img src={visual3} alt="visual" />
+          <img
+            src={visual3}
+            alt="visual"
+            onClick={() => window.open("https://meetmyrumi.com")}
+            className="rumi"
+          />
           <div className="image-text">
             <span>Rumi</span>
             <span>
-              Rumi helps individuals with disabilities live independently by
-              connecting them to supportive roommates.
+              Rumi helps individuals with disabilities live more independently
+              and integrated in the community by connecting them with supportive
+              roommates. We want to support and bring more awareness to
+              organizations that support the disability community.{" "}
               <a
                 href="https://meetmyrumi.com"
                 target="_blank"

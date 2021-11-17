@@ -82,20 +82,20 @@ const Artists = ({ setData }) => {
 
   return (
     <>
-      <h1>Meet the Artists</h1>
+      <h1>Meet the Artists - Season 1</h1>
       <div className="artists">
         {artistsArr.map((artist) => (
-          <div className="artist">
-            <img src={artist.visual1} alt="artist" />
+          <div
+            className="artist"
+            onClick={() => {
+              setData(artist);
+              openModal();
+            }}
+          >
+            <img src={artist.image} alt="artist" />
             <p>{artist.name}</p>
             <DividerIcon />
-            <div
-              onClick={() => {
-                setData(artist);
-                openModal();
-              }}
-              className="learn-more"
-            >
+            <div className="learn-more">
               <div className="learn-more__button">
                 <p>learn more</p>
                 <LearnMoreIcon />

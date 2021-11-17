@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Layout from "../../layouts/Layout";
 import art1 from "../../assets/art1.jpg";
-import art2 from "../../assets/art2.jpg";
+import art2 from "../../assets/alidaniels.jpg";
 import art3 from "../../assets/art3.jpg";
-import art4 from "../../assets/art4.PNG";
+import art4 from "../../assets/supportartists.png";
 import topology from "../../assets/topology.svg";
 import sideImage from "../../assets/side-image.png";
 import sideTopology from "../../assets/side-topology.svg";
@@ -13,6 +13,7 @@ import Modal from "../modal/Modal";
 import Artists from "./Artists";
 import Mint from "./Mint";
 import Support from "./Support";
+import FAQs from "./FAQs";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -35,7 +36,7 @@ const Home = () => {
               </p>
 
               <p>
-                1,000 randomly generated paintings, visual art, and photography
+                5,000 randomly generated paintings, visual art, and photography
                 of various rarity.
               </p>
             </div>
@@ -43,8 +44,8 @@ const Home = () => {
             {/* right */}
             <div className="art-container">
               <div>
-                <img src={art1} alt="art" />
                 <img src={art2} alt="art" />
+                <img src={art1} alt="art" />
               </div>
               <div>
                 <img src={art3} alt="art" />
@@ -56,18 +57,18 @@ const Home = () => {
         <img className="topology" src={topology} alt="topology" />
       </div>
 
+      <div id="meet-the-artists" className="meet-the-artists">
+        {/* <img className="side-image" src={sideImage} alt="side" /> */}
+        <div className="container-80">
+          <Artists setData={setData} />
+        </div>
+      </div>
+
       <div id="get-your-art" className="get-your-art">
         <img className="side-topology" src={sideTopology} alt="side-topology" />
         <img className="looper" src={looper} alt="looper" />
         <div className="container-80">
           <Mint />
-        </div>
-      </div>
-
-      <div id="meet-the-artists" className="meet-the-artists">
-        <img className="side-image" src={sideImage} alt="side" />
-        <div className="container-80">
-          <Artists setData={setData} />
         </div>
       </div>
 
@@ -79,17 +80,24 @@ const Home = () => {
         </div>
       </div> */}
 
+      <div id="causes-we-support" className="causes-we-support">
+        <div className="container-80">
+          <Support />
+        </div>
+      </div>
+
       <div id="our-team" className="our-team">
         <div className="container-80">
           <Team />
         </div>
       </div>
 
-      <div id="causes-we-support" className="causes-we-support">
+      <div id="faqs" className="faqs">
         <div className="container-80">
-          <Support />
+          <FAQs />
         </div>
       </div>
+
       <Modal data={data} />
     </Layout>
   );
