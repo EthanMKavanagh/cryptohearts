@@ -45,22 +45,20 @@ const FAQs = () => {
           />
         </button>
 
-        {mintActive && (
-          <div className={`accordion-content`}>
-            {mintArr.map((item) => (
-              <div className="accordion-item">
-                <div
-                  className="question-text"
-                  dangerouslySetInnerHTML={{ __html: item.question }}
-                />
-                <div
-                  className="answer-text"
-                  dangerouslySetInnerHTML={{ __html: item.answer }}
-                />
-              </div>
-            ))}
-          </div>
-        )}
+        <div className="accordion-content" aria-expanded={!mintActive}>
+          {mintArr.map((item) => (
+            <div className="accordion-item">
+              <div
+                className="question-text"
+                dangerouslySetInnerHTML={{ __html: item.question }}
+              />
+              <div
+                className="answer-text"
+                dangerouslySetInnerHTML={{ __html: item.answer }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="accordion-section">
@@ -76,22 +74,20 @@ const FAQs = () => {
           />
         </button>
 
-        {projectActive && (
-          <div className={`accordion-content`}>
-            {projectArr.map((item) => (
-              <div className="accordion-item">
-                <div
-                  className="question-text"
-                  dangerouslySetInnerHTML={{ __html: item.question }}
-                />
-                <div
-                  className="answer-text"
-                  dangerouslySetInnerHTML={{ __html: item.answer }}
-                />
-              </div>
-            ))}
-          </div>
-        )}
+        <div className="accordion-content" aria-expanded={!projectActive}>
+          {projectArr.map((item) => (
+            <div className="accordion-item">
+              <div
+                className="question-text"
+                dangerouslySetInnerHTML={{ __html: item.question }}
+              />
+              <div
+                className="answer-text"
+                dangerouslySetInnerHTML={{ __html: item.answer }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

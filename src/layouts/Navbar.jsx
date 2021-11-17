@@ -143,7 +143,7 @@ const Navbar = () => {
               }}
               className="navbar-link"
             >
-              Causes We Support
+              Our Mission
             </Link>
           </div>
           <div className="navbar-item">
@@ -161,6 +161,23 @@ const Navbar = () => {
               className="navbar-link"
             >
               Our Team
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
+              to="#our-team"
+              onClick={() => {
+                const element = document.getElementById("faqs");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              FAQ's
             </Link>
           </div>
         </nav>
@@ -238,7 +255,7 @@ const Navbar = () => {
               }}
               className="navbar-link"
             >
-              Causes We Support
+              Our Mission
             </Link>
           </div>
           <div className="navbar-item">
@@ -256,6 +273,23 @@ const Navbar = () => {
               className="navbar-link"
             >
               Our Team
+            </Link>
+          </div>
+          <div className="navbar-item">
+            <Link
+              to="#our-team"
+              onClick={() => {
+                const element = document.getElementById("faqs");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop - 120,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+              className="navbar-link"
+            >
+              FAQ's
             </Link>
           </div>
 

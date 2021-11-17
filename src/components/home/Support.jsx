@@ -41,7 +41,7 @@ const Support = ({ data }) => {
   ) : (
     <>
       <div className="left">
-        <h2 className="heading">Causes We Support</h2>
+        <h2 className="heading">Our Mission</h2>
 
         <div className="image-container left-indent left-column">
           <div className="left-column">
@@ -72,7 +72,12 @@ const Support = ({ data }) => {
           </div>
         </div>
         <div className="image-container right-indent">
-          <img src={visual3} alt="visual" />
+          <img
+            src={visual3}
+            alt="visual"
+            onClick={() => window.open("https://meetmyrumi.com")}
+            className="rumi"
+          />
           <div className="image-text">
             <span>Rumi</span>
             <span>

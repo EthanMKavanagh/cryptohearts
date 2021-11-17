@@ -25,7 +25,7 @@
 
 .navbar {
   top: 0;
-  width: 70%;
+  width: 80%;
   max-width: 2400px;
   display: flex;
   position: fixed;
@@ -341,7 +341,7 @@
   padding: 2px 30px;
   padding-left: 0;
 
-  @media screen and (max-width: $phone) {
+  @media screen and (max-width: $tab-land) {
     display: none;
   }
 

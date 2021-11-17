@@ -680,6 +680,10 @@
         max-width: 100%;
       }
 
+      .rumi {
+        cursor: pointer;
+      }
+
       .image-text {
         display: flex;
         flex-direction: column;
@@ -835,14 +839,16 @@
       transform: rotate(90deg);
     }
 
-    .accordion-content {
-      // GET BACKGROUND TO WORK
-      background-color: "#f3f3fe" !important;
-      overflow: hidden;
-      height: 100%;
+    .accordion-content[aria-expanded="true"] {
+      max-height: 0px;
+      transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+    }
 
-      // GET TRANSITION TO WORK
-      transition: height 1s ease-in-out;
+    .accordion-content {
+      height: 100%;
+      overflow: hidden;
+      max-height: 1000px;
+      transition: max-height 1s ease-in-out;
 
       .accordion-item {
         margin: 20px 15px;
