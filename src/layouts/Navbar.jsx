@@ -112,7 +112,7 @@ const Navbar = () => {
               Meet the Artists
             </Link>
           </div>
-          <div className="navbar-item">
+          {/* <div className="navbar-item">
             <Link
               to="#get-your-art"
               onClick={() => {
@@ -128,7 +128,7 @@ const Navbar = () => {
             >
               Mint
             </Link>
-          </div>
+          </div> */}
           <div className="navbar-item">
             <Link
               to="#causes-we-support"
@@ -224,7 +224,7 @@ const Navbar = () => {
               Meet the Artists
             </Link>
           </div>
-          <div className="navbar-item">
+          {/* <div className="navbar-item">
             <Link
               to="#get-your-art"
               onClick={() => {
@@ -240,7 +240,7 @@ const Navbar = () => {
             >
               Mint
             </Link>
-          </div>
+          </div> */}
           <div className="navbar-item">
             <Link
               to="#causes-we-support"

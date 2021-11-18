@@ -64,13 +64,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="get-your-art" className="get-your-art">
+      {/* <div id="get-your-art" className="get-your-art">
         <img className="side-topology" src={sideTopology} alt="side-topology" />
         <img className="looper" src={looper} alt="looper" />
         <div className="container-80">
           <Mint />
         </div>
-      </div>
+      </div> */}
 
       {/* <div id="causes-we-support" className="causes-we-support">
         <img className="side-topology" src={sideTopology} alt="side-topology" />
