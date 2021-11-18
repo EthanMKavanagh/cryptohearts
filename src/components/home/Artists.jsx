@@ -82,7 +82,9 @@ const Artists = ({ setData }) => {
 
   return (
     <>
-      <h1>Meet the Artists - Season 1</h1>
+      <h1>
+        <b>Meet the Artists</b>: Season 1
+      </h1>
       <div className="artists">
         {artistsArr.map((artist) => (
           <div
@@ -97,8 +99,7 @@ const Artists = ({ setData }) => {
             <DividerIcon />
             <div className="learn-more">
               <div className="learn-more__button">
-                <p>learn more</p>
-                <LearnMoreIcon />
+                <p>Learn More</p>
               </div>
             </div>
           </div>

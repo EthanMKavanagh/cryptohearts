@@ -30,7 +30,7 @@ const FAQs = () => {
 
   return (
     <>
-      <h1>FAQ's</h1>
+      <h1>FAQs</h1>
 
       <div className="accordion-section">
         <button
@@ -41,7 +41,7 @@ const FAQs = () => {
           <Chevron
             className={`accordion-icon ${mintActive && "rotate"}`}
             width={10}
-            fill={"#ffffff"}
+            fill={"#000000"}
           />
         </button>
 
@@ -70,7 +70,7 @@ const FAQs = () => {
           <Chevron
             className={`accordion-icon ${projectActive && "rotate"}`}
             width={10}
-            fill={"#ffffff"}
+            fill={"#000000"}
           />
         </button>
 

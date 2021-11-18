@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="brand">
             <div className="brand__logo">
               <img src={Logo} alt="logo" />
-              <p>Crypto Heart</p>
+              <p>CryptoHeart</p>
             </div>
             <h4>Helping Artists with Disabilities in the NFT Space.</h4>
           </div>
@@ -58,7 +58,7 @@ const Footer = () => {
         <div className="container-80">
           <div className="footer-copyright">
             <p className="copyright-text">
-              Copyright © 2021 Crypto Hearts™. All rights reserved
+              Copyright © 2021 CryptoHeart™. All rights reserved
             </p>
           </div>
         </div>

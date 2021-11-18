@@ -52,14 +52,14 @@ const Support = ({ data }) => {
           <div className="left-column">
             <img src={visual2} alt="visual" />
             <div className="image-text">
-              <span>Art Studio</span>
-              <span>
+              <h3>Art Studio</h3>
+              <p>
                 We will launch an IRL studio in Southern California. It will be
                 a supportive studio where individuals can go to create community
                 with other artists, enhance their artistic ability, and
                 represent their work in our gallery. We will provide all the
                 supplies for artists.
-              </span>
+              </p>
             </div>
           </div>
         </div>
@@ -68,12 +68,12 @@ const Support = ({ data }) => {
         <div className="image-container left-indent">
           <img src={visual1} alt="visual" />
           <div className="image-text">
-            <span>Artists with Disabilities</span>
-            <span>
+            <h3>Artists with Disabilities</h3>
+            <p>
               We want to work with established artists like Jeremy, who have
               sold work to museums, collectors, ect, and new artists like
               Marrie, who are looking to launch their artistic career.
-            </span>
+            </p>
           </div>
         </div>
         <div className="image-container right-indent">
@@ -84,20 +84,21 @@ const Support = ({ data }) => {
             className="rumi"
           />
           <div className="image-text">
-            <span>Rumi</span>
-            <span>
+            <h3>Rumi</h3>
+            <p>
               Rumi helps individuals with disabilities live more independently
               and integrated in the community by connecting them with supportive
               roommates. We want to support and bring more awareness to
-              organizations that support the disability community.{" "}
+              organizations that support the disability community (
               <a
                 href="https://meetmyrumi.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                (https://meetmyrumi.com)
+                meetmyrumi.com
               </a>
-            </span>
+              ).
+            </p>
           </div>
         </div>
       </div>

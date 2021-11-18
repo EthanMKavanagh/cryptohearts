@@ -17,7 +17,7 @@ const Mint = () => {
                 className="placeholder-img"
               /> */}
               <h3>Tier 1</h3>
-              <span className="secondary-text">1 Crypto Heart Artwork</span>
+              <span className="secondary-text">1 CryptoHeart Artwork</span>
               <span className="secondary-text">0.10 ETH</span>
               <span className="secondary-text">.10 per Artwork</span>
               <span className="secondary-text">
@@ -36,7 +36,7 @@ const Mint = () => {
           <div className="transparent-layer">
             <div className="mint-content">
               <h3>Tier 2</h3>
-              <span className="secondary-text">3 Crypto Heart Artworks</span>
+              <span className="secondary-text">3 CryptoHeart Artworks</span>
               <span className="secondary-text">0.27 ETH</span>
               <span className="secondary-text">.09 per Artwork</span>
               <span className="secondary-text">
@@ -55,7 +55,7 @@ const Mint = () => {
           <div className="transparent-layer">
             <div className="mint-content">
               <h3>Tier 3</h3>
-              <span className="secondary-text">5 Crypto Heart Artworks</span>
+              <span className="secondary-text">5 CryptoHeart Artworks</span>
               <span className="secondary-text">0.35 ETH</span>
               <span className="secondary-text">.07 per Artwork</span>
               <span className="secondary-text">

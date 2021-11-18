@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import Layout from "../../layouts/Layout";
-import art1 from "../../assets/art1.jpg";
 import art2 from "../../assets/alidaniels.jpg";
+import art1 from "../../assets/art1.jpg";
 import art3 from "../../assets/art3.jpg";
 import art4 from "../../assets/supportartists.png";
 import topology from "../../assets/topology.svg";
-import sideImage from "../../assets/side-image.png";
-import sideTopology from "../../assets/side-topology.svg";
-import looper from "../../assets/looper.svg";
-import Team from "./Team";
+import Layout from "../../layouts/Layout";
 import Modal from "../modal/Modal";
 import Artists from "./Artists";
-import Mint from "./Mint";
-import Support from "./Support";
 import FAQs from "./FAQs";
+import Support from "./Support";
+import Team from "./Team";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -22,12 +18,12 @@ const Home = () => {
     <Layout>
       <div className="home-wrapper">
         <div className="home">
+          <div className="home-overlay"></div>
           <div className="container-80">
             {/* left */}
             <div className="hero">
-              <h1 className="transparent-text">Crypto Heart</h1>
-              <h2 className="heading-text">Crypto Heart</h2>
-              <h2 className="heading-text-2">See the Able, Not the Label</h2>
+              <h1 className="heading-text">CryptoHeart</h1>
+              <h2 className="heading-text-2">See the able, not the label</h2>
 
               <p>
                 A platform for artists with disabilities. Our mission is to

@@ -46,12 +46,21 @@ const ConnectWallet = () => {
         <span className="bell__circle" />
       </div> */}
       <div className="button-group">
-        <div onClick={() => window.open("https://discord.gg/cbjE75n9")}>
+        <a
+          href="https://discord.gg/aQE5NAa8j4"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img className="discord" src={discord} alt="discord" />
-        </div>
-        <div onClick={() => window.open("https://twitter.com/CryptoHeart88")}>
+        </a>
+
+        <a
+          href="https://twitter.com/_cryptoheart"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img className="twitter" src={twitter} alt="twitter" />
-        </div>
+        </a>
         <button className="button">Connect Wallet</button>
       </div>
     </div>

@@ -80,7 +80,7 @@ const Navbar = () => {
           className="navbar__link"
         >
           <img alt="logo" className="navbar__logo" src={Logo} />
-          <span className="navbar__logo-text">Crypto Heart</span>
+          <span className="navbar__logo-text">CryptoHeart</span>
         </Link>
 
         <DividerIcon />
@@ -177,7 +177,7 @@ const Navbar = () => {
               }}
               className="navbar-link"
             >
-              FAQ's
+              FAQs
             </Link>
           </div>
         </nav>
@@ -289,21 +289,28 @@ const Navbar = () => {
               }}
               className="navbar-link"
             >
-              FAQ's
+              FAQs
             </Link>
           </div>
 
           <div className="divider--white" />
 
           <div>
-            <div onClick={() => window.open("https://discord.gg/cbjE75n9")}>
+            <a
+              href="https://discord.gg/cbjE75n9"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img className="discord" src={discord} alt="discord" />
-            </div>
-            <div
-              onClick={() => window.open("https://twitter.com/CryptoHeart88")}
+            </a>
+
+            <a
+              href="https://twitter.com/_cryptoheart"
+              target="_blank"
+              rel="noreferrer"
             >
               <img className="twitter" src={twitter} alt="twitter" />
-            </div>
+            </a>
           </div>
 
           <div onClick={() => openModal()} className="nav__link">
