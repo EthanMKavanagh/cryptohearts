@@ -1,4 +1,14 @@
 import { toast } from "react-toastify";
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: "https://ethereum-api.xyz",
+  timeout: 30000, // 30 secs
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+});
 
 const catchError = (err) => {
   if (err.response) {

@@ -34,7 +34,7 @@ const BellIcon = () => (
   </svg>
 );
 
-const ConnectWallet = () => {
+const ConnectWallet = ({ address }) => {
   return (
     <div className="navbar-buttons">
       {/* <div className="search">
@@ -61,7 +61,11 @@ const ConnectWallet = () => {
         >
           <img className="twitter" src={twitter} alt="twitter" />
         </a>
-        <button className="button">Connect Wallet</button>
+        <button className="button">
+          {address
+            ? `Connected: ${address.substring(0, 6)}...`
+            : "Connect Wallet"}
+        </button>
       </div>
     </div>
   );

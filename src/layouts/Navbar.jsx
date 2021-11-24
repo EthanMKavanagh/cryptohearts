@@ -19,7 +19,7 @@ const DividerIcon = () => (
   </svg>
 );
 
-const Navbar = () => {
+const Navbar = ({ address }) => {
   const [scrollTop, setScrollTop] = useState(0);
 
   const openModal = () => {
@@ -184,7 +184,7 @@ const Navbar = () => {
       </div>
 
       <div className="connect-wallet hide-lg">
-        <ConnectWallet />
+        <ConnectWallet address={address} />
       </div>
 
       <input
@@ -314,7 +314,9 @@ const Navbar = () => {
           </div>
 
           <div onClick={() => openModal()} className="nav__link">
-            Connect Wallet
+            {address
+              ? `Connected: ${address.substring(0, 8)}...`
+              : "Connect Wallet"}
           </div>
         </nav>
       </div>
