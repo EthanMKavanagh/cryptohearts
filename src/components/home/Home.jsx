@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import art2 from "../../assets/alidaniels.jpg";
-import art1 from "../../assets/art1.jpg";
-import art3 from "../../assets/art3.jpg";
+import art1 from "../../assets/alidaniels.jpg";
+import art2 from "../../assets/RockinOS.jpg";
+import art3 from "../../assets/ReflectionsofJazz.jpg";
 import art4 from "../../assets/supportartists.png";
 import topology from "../../assets/topology.svg";
 import Layout from "../../layouts/Layout";
@@ -40,8 +40,8 @@ const Home = () => {
             {/* right */}
             <div className="art-container">
               <div>
-                <img src={art2} alt="art" />
                 <img src={art1} alt="art" />
+                <img src={art2} alt="art" />
               </div>
               <div>
                 <img src={art3} alt="art" />
