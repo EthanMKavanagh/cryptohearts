@@ -80,10 +80,19 @@ const Artists = ({ setData }) => {
     document.body.style.overflow = "hidden";
   };
 
+  const openMintModal = (e) => {
+    e.stopPropagation();
+    const modal = document.getElementById("mint-modal-btn");
+    modal.checked = true;
+    document.body.style.overflow = "hidden";
+  };
+
   return (
     <>
       <h1>
-        <b>Meet the Artists</b>: Season 1
+        Meet the Artists:
+        <br />
+        Season 1
       </h1>
       <div className="artists">
         {artistsArr.map((artist) => (
@@ -100,6 +109,16 @@ const Artists = ({ setData }) => {
             <div className="learn-more">
               <div className="learn-more__button">
                 <p>Learn More</p>
+              </div>
+
+              <div
+                className="learn-more__mint"
+                onClick={(e) => {
+                  setData(artist);
+                  openMintModal(e);
+                }}
+              >
+                <div className="mint-button">Mint</div>
               </div>
             </div>
           </div>

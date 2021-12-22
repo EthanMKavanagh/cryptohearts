@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import art2 from "../../assets/alidaniels.jpg";
 import art1 from "../../assets/art1.jpg";
 import art3 from "../../assets/art3.jpg";
 import art4 from "../../assets/supportartists.png";
 import topology from "../../assets/topology.svg";
 import Layout from "../../layouts/Layout";
+import MintModal from "../modal/MintModal";
 import Modal from "../modal/Modal";
 import Artists from "./Artists";
 import FAQs from "./FAQs";
@@ -35,6 +37,25 @@ const Home = () => {
                 5,000 randomly generated paintings, visual art, and photography
                 of various rarity.
               </p>
+
+              <Link
+                to="#meet-the-artists"
+                onClick={() => {
+                  const element = document.getElementById("meet-the-artists");
+                  if (element) {
+                    window.scrollTo({
+                      top: element.offsetTop - 120,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
+                <div className="mint-button-container">
+                  <div>
+                    <div className="mint-button">Mint</div>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             {/* right */}
@@ -95,6 +116,7 @@ const Home = () => {
       </div>
 
       <Modal data={data} />
+      <MintModal data={data} />
     </Layout>
   );
 };
