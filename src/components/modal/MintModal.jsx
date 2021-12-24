@@ -21,6 +21,7 @@ const MintModal = ({ data }) => {
   const [nftContract, setNftContract] = useState(null);
   const [currentSupply, setCurrentSupply] = useState(null);
   const [maxSupply, setMaxSupply] = useState(null);
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const getContract = async () => {
@@ -31,8 +32,8 @@ const MintModal = ({ data }) => {
         const signer = provider.getSigner();
         const nftContract = new ethers.Contract(contractAddress, abi, signer);
 
-        // const currentSupply = await nftContract.currentSupply;
-        // const maxSupply = await nftContract.maxSupply();
+        // const currentSupply = nftContract.currentSupply();
+        // const maxSupply = nftContract.maxSupply();
 
         setNftContract(nftContract);
         // setCurrentSupply([currentSupply]);
@@ -56,19 +57,18 @@ const MintModal = ({ data }) => {
       const { ethereum } = window;
 
       if (ethereum) {
-        console.log(nftContract);
-        const ethPrice = 0.01 * mintAmount;
+        const ethPrice = 0.05 * mintAmount;
         let nftTxn = await nftContract.mint(mintAmount, {
           value: ethers.utils.parseEther(ethPrice.toString()),
         });
 
-        console.log("Mining... please wait");
         setLoading(true);
-        await nftTxn.wait();
-        setLoading(false);
+        await nftTxn.wait().then(() => {
+          setLoading(false);
+        });
 
-        console.log(
-          `Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`
+        setMessage(
+          `Minting, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`
         );
       } else {
         console.log("Ethereum object does not exist");
@@ -126,6 +126,8 @@ const MintModal = ({ data }) => {
               <br />
               {/* {currentSupply} / {maxSupply} remaining */}
             </button>
+
+            <div>{message}</div>
           </div>
         </div>
       </div>
