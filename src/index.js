@@ -4,12 +4,15 @@ import "./styles/main.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { UserProvider } from "./contexts";
+import { RecoilRoot } from "recoil";
 
 ReactDOM.render(
   <React.StrictMode>
-    <UserProvider>
-      <App />
-    </UserProvider>
+    <RecoilRoot>
+      <UserProvider>
+        <App />
+      </UserProvider>
+    </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")
 );

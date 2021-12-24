@@ -13,7 +13,7 @@ import FAQs from "./FAQs";
 import Support from "./Support";
 import Team from "./Team";
 
-const Home = () => {
+const Home = ({ address }) => {
   const [data, setData] = useState(null);
 
   return (
@@ -34,8 +34,7 @@ const Home = () => {
               </p>
 
               <p>
-                5,000 randomly generated paintings, visual art, and photography
-                of various rarity.
+                5,000 paintings, visual art, and photography of various rarity.
               </p>
 
               <Link
@@ -116,7 +115,7 @@ const Home = () => {
       </div>
 
       <Modal data={data} />
-      <MintModal data={data} />
+      <MintModal data={data} address={address} />
     </Layout>
   );
 };

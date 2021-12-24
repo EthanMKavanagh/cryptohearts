@@ -1,18 +1,24 @@
+import WalletConnectProvider from "@walletconnect/web3-provider";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { cssTransition, ToastContainer } from "react-toastify";
+import { useRecoilState } from "recoil";
+import Web3 from "web3";
+// WEB3
+import Web3Modal from "web3modal";
 import Home from "./components/home/Home";
 import Page from "./components/routing/Page";
 import Routes from "./components/routing/Routes";
-import Navbar from "./layouts/Navbar";
-import Footer from "./layouts/Footer";
 import ScrollToTop from "./components/scrollToTop";
-import { ToastContainer } from "react-toastify";
-import { cssTransition } from "react-toastify";
-
-// WEB3
-import Web3Modal from "web3modal";
-import Web3 from "web3";
-import WalletConnectProvider from "@walletconnect/web3-provider";
+import Footer from "./layouts/Footer";
+import Navbar from "./layouts/Navbar";
+import {
+  currentAddressState,
+  currentChainId,
+  currentConnected,
+  currentNetworkId,
+  openModalState,
+} from "./state";
 
 const Zoom = cssTransition({
   enter: "zoomIn",
@@ -37,11 +43,12 @@ function initWeb3(provider) {
 }
 
 const App = () => {
+  const [address, setAddress] = useRecoilState(currentAddressState);
   const [provider, setProvider] = useState(null);
-  const [connected, setConnected] = useState(false);
-  const [address, setAddress] = useState(null);
-  const [chainId, setChainId] = useState(null);
-  const [networkId, setNetworkId] = useState(null);
+  const [connected, setConnected] = useRecoilState(currentConnected);
+  const [chainId, setChainId] = useRecoilState(currentChainId);
+  const [networkId, setNetworkId] = useRecoilState(currentNetworkId);
+  const [openModal, setOpenModal] = useRecoilState(openModalState);
   const [web3, setWeb3] = useState(null);
 
   const providerOptions = {
@@ -59,27 +66,34 @@ const App = () => {
     providerOptions,
   });
 
+  const findProvider = async () => {
+    const _provider = await web3Modal.connect();
+    const web3 = initWeb3(_provider);
+    const accounts = await web3.eth.getAccounts();
+    const address = accounts[0];
+    const networkId = await web3.eth.net.getId();
+    const chainId = await web3.eth.chainId();
+
+    setProvider(_provider);
+    setConnected(true);
+
+    setAddress(address);
+    setNetworkId(networkId);
+    setChainId(chainId);
+    setWeb3(web3);
+
+    await subscribeProvider(_provider);
+  };
+
   useEffect(() => {
-    const findProvider = async () => {
-      const provider = await web3Modal.connect();
-      const web3 = initWeb3(provider);
-      const accounts = await web3.eth.getAccounts();
-      const address = accounts[0];
-      const networkId = await web3.eth.net.getId();
-      const chainId = await web3.eth.chainId();
-
-      setProvider(provider);
-      setConnected(true);
-      setAddress(address);
-      setNetworkId(networkId);
-      setChainId(chainId);
-      setWeb3(web3);
-
-      await subscribeProvider(provider);
-    };
-
     findProvider();
-  });
+  }, []);
+
+  useEffect(() => {
+    if (openModal) {
+      findProvider();
+    }
+  }, [openModal]);
 
   const subscribeProvider = async (provider) => {
     if (!provider.on) {
@@ -138,7 +152,13 @@ const App = () => {
         transition={Zoom}
       />
       <Switch>
-        <Page exact path="/" component={Home} title="NFT" />
+        <Page
+          exact
+          path="/"
+          // element={<Home address={address} />}
+          component={Home}
+          title="NFT"
+        />
         <Route component={Routes} />
       </Switch>
       <Footer />
