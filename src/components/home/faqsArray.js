@@ -36,4 +36,9 @@ export const projectArr = [
     answer:
       "An IRL studio and gallery in Southern California. It is a supportive studio where individuals can go to create community with other artists, enhance their artistic ability, and learn how to showcase their work. The studio will provide artistic support, materials, and space for painting, drawing, visual art and generative art.",
   },
+  {
+    question: "What is the licensing for the project?",
+    answer:
+      "All the art in this project is covered by the NFT License. You can find more information here: https://www.nftlicense.org/",
+  },
 ];
