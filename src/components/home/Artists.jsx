@@ -1,5 +1,7 @@
 import React from "react";
+import { currentAddressState } from "../../state";
 import { artistsArr } from "./artistsArr";
+import { useRecoilState } from "recoil";
 
 const LearnMoreIcon = () => (
   <svg
@@ -74,6 +76,8 @@ const DividerIcon = () => (
 );
 
 const Artists = ({ setData }) => {
+  const [address] = useRecoilState(currentAddressState);
+
   const openModal = () => {
     const modal = document.getElementById("modal-btn");
     modal.checked = true;
@@ -111,15 +115,17 @@ const Artists = ({ setData }) => {
                 <p>Learn More</p>
               </div>
 
-              <div
-                className="learn-more__mint"
-                onClick={(e) => {
-                  setData(artist);
-                  openMintModal(e);
-                }}
-              >
-                <div className="mint-button">Mint</div>
-              </div>
+              {address && (
+                <div
+                  className="learn-more__mint"
+                  onClick={(e) => {
+                    setData(artist);
+                    openMintModal(e);
+                  }}
+                >
+                  <div className="mint-button">Mint</div>
+                </div>
+              )}
             </div>
           </div>
         ))}
