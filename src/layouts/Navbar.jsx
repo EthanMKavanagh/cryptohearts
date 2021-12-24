@@ -4,6 +4,8 @@ import ConnectWallet from "../components/ConnectWallet";
 import twitter from "../assets/twitter.svg";
 import discord from "../assets/discord.svg";
 import Logo from "../assets/cryptoheart.png";
+import { useRecoilState } from "recoil";
+import { openModalState } from "../state";
 
 const DividerIcon = () => (
   <svg
@@ -22,10 +24,7 @@ const DividerIcon = () => (
 const Navbar = ({ address }) => {
   const [scrollTop, setScrollTop] = useState(0);
 
-  const openModal = () => {
-    const modal = document.getElementById("modal-btn");
-    modal.checked = true;
-  };
+  const openModal = () => {};
 
   const hideNav = (e) => {
     console.log(e.target.classList[0]);
