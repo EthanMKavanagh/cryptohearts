@@ -10,6 +10,11 @@ const mintOptions = [
   { label: "3", value: 3 },
   { label: "4", value: 4 },
   { label: "5", value: 5 },
+  { label: "6", value: 6 },
+  { label: "7", value: 7 },
+  { label: "8", value: 8 },
+  { label: "9", value: 9 },
+  { label: "10", value: 10 },
 ];
 
 const MintModal = ({ data }) => {
@@ -19,9 +24,10 @@ const MintModal = ({ data }) => {
   const [loading, setLoading] = useRecoilState(currentLoadingState);
 
   const [nftContract, setNftContract] = useState(null);
-  const [currentSupply, setCurrentSupply] = useState(null);
-  const [maxSupply, setMaxSupply] = useState(null);
-  const [message, setMessage] = useState("");
+  // const [currentSupply, setCurrentSupply] = useState(null);
+  // const [maxSupply, setMaxSupply] = useState(null);
+  const [message, setMessage] = useState(null);
+  const [err, setErr] = useState(null);
 
   useEffect(() => {
     const getContract = async () => {
@@ -30,13 +36,13 @@ const MintModal = ({ data }) => {
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const nftContract = new ethers.Contract(contractAddress, abi, signer);
+        const _nftContract = new ethers.Contract(contractAddress, abi, signer);
 
-        // const currentSupply = nftContract.currentSupply();
-        // const maxSupply = nftContract.maxSupply();
+        // const currentSupply = _nftContract.currentSupply();
+        // const maxSupply = _nftContract.maxSupply();
 
-        setNftContract(nftContract);
-        // setCurrentSupply([currentSupply]);
+        setNftContract(_nftContract);
+        // setCurrentSupply(currentSupply);
         // setMaxSupply(maxSupply);
       }
     };
@@ -74,7 +80,13 @@ const MintModal = ({ data }) => {
         console.log("Ethereum object does not exist");
       }
     } catch (err) {
-      console.log(err);
+      if (err.code === "INSUFFICIENT_FUNDS") {
+        setErr("Insufficient Funds");
+      } else {
+        setErr(err.code);
+      }
+
+      console.log(err.message);
     }
   };
 
@@ -101,21 +113,26 @@ const MintModal = ({ data }) => {
               Total price: {(mintAmount * 0.05).toString().substring(0, 4)} ETH
             </h5>
 
-            {mintOptions.map((option) => (
-              <div key={option.label} className="radio">
-                <input
-                  checked={option.value === mintAmount}
-                  type="radio"
-                  id={`mintCount${option.value}`}
-                  name="mintCount"
-                  value={option.value}
-                  onChange={() => setMintAmount(option.value)}
-                />
-                <label htmlFor={`mintCount${option.value}`}>
-                  {option.label}
-                </label>
-              </div>
-            ))}
+            <div className="radio-container">
+              {mintOptions.map((option) => (
+                <div key={option.label} className="radio">
+                  <input
+                    checked={option.value === mintAmount}
+                    type="radio"
+                    id={`mintCount${option.value}`}
+                    name="mintCount"
+                    value={option.value}
+                    onChange={() => setMintAmount(option.value)}
+                  />
+                  <label htmlFor={`mintCount${option.value}`}>
+                    {option.label}
+                  </label>
+                </div>
+              ))}
+            </div>
+
+            {err && <div className="error-text">{err}</div>}
+            {message && <div className="success-text">{message}</div>}
 
             <button
               disabled={!mintAmount && !address}
@@ -126,8 +143,6 @@ const MintModal = ({ data }) => {
               <br />
               {/* {currentSupply} / {maxSupply} remaining */}
             </button>
-
-            <div>{message}</div>
           </div>
         </div>
       </div>
