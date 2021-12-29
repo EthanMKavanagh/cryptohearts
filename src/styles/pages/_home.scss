@@ -88,42 +88,42 @@
         font-family: $SerifFont;
       }
 
-      // .mint-button-container {
-      //   border-radius: 73.1729px;
-      //   border: 1px solid $color-white;
-      //   width: 200px;
-      //   text-align: center;
-      //   cursor: pointer;
+      .mint-button-container {
+        border-radius: 73.1729px;
+        border: 1px solid $color-white;
+        width: 200px;
+        text-align: center;
+        cursor: pointer;
 
-      //   div {
-      //     border-radius: 73.1729px;
-      //     border: 1px solid $color-white;
-      //     margin: 8px;
-      //   }
+        div {
+          border-radius: 73.1729px;
+          border: 1px solid $color-white;
+          margin: 8px;
+        }
 
-      //   .mint-button {
-      //     color: $color-white;
-      //     text-transform: uppercase;
-      //     font-family: $SerifFont;
-      //     padding: 10px;
-      //     font-weight: 700;
-      //     font-size: 1.2rem;
-      //     background: linear-gradient(
-      //         90deg,
-      //         #fedaab 0%,
-      //         #fca998 25.43%,
-      //         #f96b80 60.65%,
-      //         #f84571 86.5%,
-      //         #f7366b 100%
-      //       ),
-      //       linear-gradient(
-      //         306.64deg,
-      //         rgba(255, 41, 105, 0.35) 27.07%,
-      //         rgba(247, 122, 28, 0.35) 71.29%
-      //       ),
-      //       #f28f33;
-      //   }
-      // }
+        .mint-button {
+          color: $color-white;
+          text-transform: uppercase;
+          font-family: $SerifFont;
+          padding: 10px;
+          font-weight: 700;
+          font-size: 1.2rem;
+          background: linear-gradient(
+              90deg,
+              #fedaab 0%,
+              #fca998 25.43%,
+              #f96b80 60.65%,
+              #f84571 86.5%,
+              #f7366b 100%
+            ),
+            linear-gradient(
+              306.64deg,
+              rgba(255, 41, 105, 0.35) 27.07%,
+              rgba(247, 122, 28, 0.35) 71.29%
+            ),
+            #f28f33;
+        }
+      }
 
       @media screen and (max-width: $tab-land) {
         .mint-button-container {
@@ -283,6 +283,10 @@
         transition: all 0.2s ease-in-out;
         cursor: pointer;
 
+        @media screen and (max-width: $phone) {
+          box-shadow: 0px 4px 20px -6px rgba(31, 47, 70, 0.8);
+        }
+
         &:hover {
           transform: scale(1.02);
         }
@@ -302,6 +306,7 @@
 
         .learn-more {
           margin-top: 10px;
+          flex-direction: column;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -321,6 +326,42 @@
               font-weight: 700;
               font-size: 16px;
               color: $color-white;
+            }
+          }
+
+          &__mint {
+            margin-top: 10px;
+            border-radius: 73.1729px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+
+            div {
+              border-radius: 73.1729px;
+              margin: 8px;
+            }
+
+            .mint-button {
+              color: $color-white;
+              text-transform: uppercase;
+              font-family: $SerifFont;
+              padding: 10px;
+              font-weight: 700;
+              font-size: 1.2rem;
+              background: linear-gradient(
+                  90deg,
+                  #fedaab 0%,
+                  #fca998 25.43%,
+                  #f96b80 60.65%,
+                  #f84571 86.5%,
+                  #f7366b 100%
+                ),
+                linear-gradient(
+                  306.64deg,
+                  rgba(255, 41, 105, 0.35) 27.07%,
+                  rgba(247, 122, 28, 0.35) 71.29%
+                ),
+                #f28f33;
             }
           }
         }
@@ -580,6 +621,11 @@
           margin: 0;
           margin-top: 20px;
 
+          a {
+            font-size: 20px;
+            color: #365370;
+          }
+
           @media screen and (max-width: $tab-land) {
             text-align: center;
             width: 100%;
@@ -717,6 +763,14 @@
         p {
           width: 100%;
           margin-top: 10px;
+
+          a {
+            color: white;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
 
         h3 {

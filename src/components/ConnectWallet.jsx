@@ -1,6 +1,8 @@
 import React from "react";
-import twitter from "../assets/twitter.svg";
+import { useRecoilState } from "recoil";
 import discord from "../assets/discord.svg";
+import twitter from "../assets/twitter.svg";
+import { openModalState } from "../state";
 
 const SearchIcon = () => (
   <svg
@@ -34,7 +36,13 @@ const BellIcon = () => (
   </svg>
 );
 
-const ConnectWallet = () => {
+const ConnectWallet = ({ address }) => {
+  const [modalState, setOpenModal] = useRecoilState(openModalState);
+
+  const openModal = () => {
+    setOpenModal(modalState + 1);
+  };
+
   return (
     <div className="navbar-buttons">
       {/* <div className="search">
@@ -61,7 +69,16 @@ const ConnectWallet = () => {
         >
           <img className="twitter" src={twitter} alt="twitter" />
         </a>
-        <button className="button">Connect Wallet</button>
+        <button
+          className="button"
+          onClick={() => {
+            openModal();
+          }}
+        >
+          {address
+            ? `Connected: ${address.substring(0, 6)}...`
+            : "Connect Wallet"}
+        </button>
       </div>
     </div>
   );

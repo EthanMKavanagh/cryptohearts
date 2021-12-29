@@ -3,6 +3,8 @@ import { useRequest } from "ahooks";
 import { me } from "../api";
 import Loader from "../components/loader/loader";
 import React from "react";
+import { useRecoilState } from "recoil";
+import { currentLoadingState } from "../state";
 
 export const defaultUser = null;
 
@@ -20,7 +22,7 @@ const reducer = (state, action) => {
 const UserContext = React.createContext([defaultUser, () => {}]);
 
 export const UserProvider = ({ children }) => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useRecoilState(currentLoadingState);
   const [state, dispatch] = React.useReducer(reducer, defaultUser);
 
   useRequest(me, {

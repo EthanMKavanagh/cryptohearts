@@ -4,6 +4,8 @@ import ConnectWallet from "../components/ConnectWallet";
 import twitter from "../assets/twitter.svg";
 import discord from "../assets/discord.svg";
 import Logo from "../assets/cryptoheart.png";
+import { useRecoilState } from "recoil";
+import { openModalState } from "../state";
 
 const DividerIcon = () => (
   <svg
@@ -19,13 +21,10 @@ const DividerIcon = () => (
   </svg>
 );
 
-const Navbar = () => {
+const Navbar = ({ address }) => {
   const [scrollTop, setScrollTop] = useState(0);
 
-  const openModal = () => {
-    const modal = document.getElementById("modal-btn");
-    modal.checked = true;
-  };
+  const openModal = () => {};
 
   const hideNav = (e) => {
     console.log(e.target.classList[0]);
@@ -184,7 +183,7 @@ const Navbar = () => {
       </div>
 
       <div className="connect-wallet hide-lg">
-        <ConnectWallet />
+        <ConnectWallet address={address} />
       </div>
 
       <input
@@ -314,7 +313,9 @@ const Navbar = () => {
           </div>
 
           <div onClick={() => openModal()} className="nav__link">
-            Connect Wallet
+            {address
+              ? `Connected: ${address.substring(0, 8)}...`
+              : "Connect Wallet"}
           </div>
         </nav>
       </div>

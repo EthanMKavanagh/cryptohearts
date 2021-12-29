@@ -1,5 +1,7 @@
 import React from "react";
+import { currentAddressState } from "../../state";
 import { artistsArr } from "./artistsArr";
+import { useRecoilState } from "recoil";
 
 const LearnMoreIcon = () => (
   <svg
@@ -74,8 +76,17 @@ const DividerIcon = () => (
 );
 
 const Artists = ({ setData }) => {
+  const [address] = useRecoilState(currentAddressState);
+
   const openModal = () => {
     const modal = document.getElementById("modal-btn");
+    modal.checked = true;
+    document.body.style.overflow = "hidden";
+  };
+
+  const openMintModal = (e) => {
+    e.stopPropagation();
+    const modal = document.getElementById("mint-modal-btn");
     modal.checked = true;
     document.body.style.overflow = "hidden";
   };
@@ -83,7 +94,9 @@ const Artists = ({ setData }) => {
   return (
     <>
       <h1>
-        <b>Meet the Artists</b>: Season 1
+        Meet the Artists:
+        <br />
+        Season 1
       </h1>
       <div className="artists">
         {artistsArr.map((artist) => (
@@ -101,6 +114,18 @@ const Artists = ({ setData }) => {
               <div className="learn-more__button">
                 <p>Learn More</p>
               </div>
+
+              {address && (
+                <div
+                  className="learn-more__mint"
+                  onClick={(e) => {
+                    setData(artist);
+                    openMintModal(e);
+                  }}
+                >
+                  <div className="mint-button">Mint</div>
+                </div>
+              )}
             </div>
           </div>
         ))}
