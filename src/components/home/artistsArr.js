@@ -11,6 +11,7 @@ export const artistsArr = [
     visual1: "jeremy1.PNG",
     visual2: "jeremy2.PNG",
     visual3: "jeremy3.PNG",
+    address: "0xa11edf642d6f080f2e07bacfbb5cb951d9701632",
   },
   {
     name: "Ali Shahrouzi",
@@ -24,6 +25,7 @@ export const artistsArr = [
     visual1: "ali1.jpg",
     visual2: "ali2.jpg",
     visual3: "ali3.jpg",
+    address: "0x3f81ec7c68086f73fb658b900f58a8fc674c6b10",
   },
   {
     name: "Marrie Bottleson",
@@ -37,6 +39,7 @@ export const artistsArr = [
     visual1: "marrie1.jpg",
     visual2: "marrie2.jpg",
     visual3: "marrie3.JPG",
+    address: "0xa783a4e326c5a7ee1f3861727b3d449142d4d33a",
   },
   {
     name: "Matt Sully",
@@ -50,6 +53,7 @@ export const artistsArr = [
     visual1: "matt1.jpg",
     visual2: "matt2.jpg",
     visual3: "matt3.jpg",
+    address: "0xc277c16e965d86cacf291807c14b1f338ddcdaca",
   },
   {
     name: "John Bramblitt",
@@ -63,5 +67,6 @@ export const artistsArr = [
     visual1: "john1.jpg",
     visual2: "john2.jpg",
     visual3: "john3.jpg",
+    address: "0xbfa9be16dd21563b6a950ea91cb9185e600a12f8",
   },
 ];
