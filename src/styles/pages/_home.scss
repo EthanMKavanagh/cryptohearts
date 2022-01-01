@@ -276,32 +276,34 @@
       align-items: center;
 
       .artist {
-        background: #fcfcfd;
-        box-shadow: 0px 4px 20px -6px rgba(31, 47, 70, 0.12);
-        border-radius: 18px;
-        padding: 18px;
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-
-        @media screen and (max-width: $phone) {
-          box-shadow: 0px 4px 20px -6px rgba(31, 47, 70, 0.8);
-        }
-
-        &:hover {
-          transform: scale(1.02);
-        }
-
-        img {
+        .artist-container {
+          background: #fcfcfd;
+          box-shadow: 0px 4px 20px -6px rgba(31, 47, 70, 0.12);
           border-radius: 18px;
-          width: 250px;
-          height: 300px;
-          object-fit: cover;
-        }
+          padding: 18px;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
 
-        p {
-          font-size: 18px;
-          text-align: center;
-          font-family: $SerifFont;
+          @media screen and (max-width: $phone) {
+            box-shadow: 0px 4px 20px -6px rgba(31, 47, 70, 0.4);
+          }
+
+          &:hover {
+            transform: scale(1.02);
+          }
+
+          img {
+            border-radius: 18px;
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+          }
+
+          p {
+            font-size: 18px;
+            text-align: center;
+            font-family: $SerifFont;
+          }
         }
 
         .learn-more {
@@ -315,7 +317,6 @@
             background-color: #3772ff;
             text-align: center;
             border-radius: 90px;
-
             padding: 12px 16px;
             display: flex;
             gap: 10px;
@@ -339,6 +340,7 @@
             div {
               border-radius: 73.1729px;
               margin: 8px;
+              box-shadow: 0px 4px 20px -6px rgba(31, 47, 70, 0.5);
             }
 
             .mint-button {

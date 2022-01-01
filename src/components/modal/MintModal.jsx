@@ -3,6 +3,7 @@ import { ethers } from "ethers";
 import abi from "../../helpers/contractABI.json";
 import { useRecoilState } from "recoil";
 import { currentAddressState } from "../../state";
+import Select from "react-select";
 
 const mintOptions = [
   { label: "1", value: 1 },
@@ -161,22 +162,27 @@ const MintModal = ({ data }) => {
                   ETH
                 </h5>
 
-                <div className="radio-container">
-                  {mintOptions.map((option) => (
-                    <div key={option.label} className="radio">
-                      <input
-                        checked={option.value === mintAmount}
-                        type="radio"
-                        id={`mintCount${option.value}`}
-                        name="mintCount"
-                        value={option.value}
-                        onChange={() => setMintAmount(option.value)}
-                      />
-                      <label htmlFor={`mintCount${option.value}`}>
-                        {option.label}
-                      </label>
-                    </div>
-                  ))}
+                <Select
+                  options={mintOptions}
+                  value={mintOptions.filter((ref) => ref.value === mintAmount)}
+                  onChange={(e) => setMintAmount(e.value)}
+                  styles={{
+                    option: (styles) => {
+                      return {
+                        ...styles,
+                        zIndex: 20,
+                        overflowY: "auto",
+                      };
+                    },
+                  }}
+                />
+
+                <div className="bullets">
+                  <ul>
+                    <li>10 unique pieces</li>
+                    <li>All mints in the same transaction will be different</li>
+                    <li>Redeemable for physicals</li>
+                  </ul>
                 </div>
 
                 {err && <div className="error-text">{err}</div>}
