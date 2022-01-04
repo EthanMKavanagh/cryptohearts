@@ -11,8 +11,10 @@ const Support = ({ data }) => {
           {data.name} <br />
         </h2>
 
-        {data.bio.map((text) => (
-          <p className="bio-text">{text}</p>
+        {data.bio.map((text, i) => (
+          <p className="bio-text" key={i}>
+            {text}
+          </p>
         ))}
       </div>
       <div className="right">

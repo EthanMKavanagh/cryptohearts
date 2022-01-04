@@ -47,7 +47,7 @@ const FAQs = () => {
 
         <div className="accordion-content" aria-expanded={!mintActive}>
           {mintArr.map((item) => (
-            <div className="accordion-item">
+            <div className="accordion-item" key={item.answer}>
               <div
                 className="question-text"
                 dangerouslySetInnerHTML={{ __html: item.question }}
@@ -76,7 +76,7 @@ const FAQs = () => {
 
         <div className="accordion-content" aria-expanded={!projectActive}>
           {projectArr.map((item) => (
-            <div className="accordion-item">
+            <div className="accordion-item" key={item.answer}>
               <div
                 className="question-text"
                 dangerouslySetInnerHTML={{ __html: item.question }}

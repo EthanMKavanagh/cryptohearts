@@ -100,7 +100,7 @@ const Artists = ({ setData }) => {
       </h1>
       <div className="artists">
         {artistsArr.map((artist) => (
-          <div className="artist">
+          <div className="artist" key={artist.address}>
             <div
               className="artist-container"
               onClick={() => {

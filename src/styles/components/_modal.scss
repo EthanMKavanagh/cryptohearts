@@ -242,16 +242,27 @@
     }
 
     .success-text {
+      display: flex;
+      flex-direction: column;
       padding: 5px;
       background-color: green;
       display: flex;
       border-radius: 5px;
-      color: white;
       justify-content: center;
       margin: 10px 0;
+
+      p,
+      a {
+        color: white;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
 
     .mint-button {
+      cursor: pointer;
       border-width: 0;
       border-radius: 73.1729px;
       color: $color-white;

@@ -92,6 +92,9 @@ const MintModal = ({ data }) => {
       const modal = document.getElementById("mint-modal-btn");
       modal.checked = false;
       document.body.style.overflow = "auto";
+
+      setMessage(null);
+      setErr(null);
     }
   };
 
@@ -114,19 +117,30 @@ const MintModal = ({ data }) => {
         setMintLoading(false);
 
         setMessage(
-          `Minted, see transaction: https://etherscan.io/tx/${nftTxn.hash}`
+          <>
+            <p>Minted, see transaction:</p>
+            <a
+              href={`https://etherscan.io/tx/${nftTxn.hash}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Etherscan
+            </a>
+          </>
         );
       } else {
         console.log("Ethereum object does not exist");
       }
     } catch (err) {
       if (err.code === "INSUFFICIENT_FUNDS") {
-        setErr("Insufficient Funds");
+        setErr("Insufficient funds");
+      } else if (err.code === 4001) {
+        setErr("User denied transaction");
       } else {
-        setErr(err.code);
+        setErr("Error");
       }
 
-      console.log(err.message);
+      console.log(err);
     }
   };
 
@@ -188,7 +202,6 @@ const MintModal = ({ data }) => {
                 {err && <div className="error-text">{err}</div>}
                 {message && <div className="success-text">{message}</div>}
 
-                {console.log("address", address, "mintAmount", mintAmount)}
                 <button
                   disabled={!mintAmount && !address}
                   className="mint-button"
