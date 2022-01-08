@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { cssTransition, ToastContainer } from "react-toastify";
 import { useRecoilState } from "recoil";
-import Web3 from "web3";
+
 // WEB3
+import Web3 from "web3";
 import Web3Modal from "web3modal";
 import Home from "./components/home/Home";
 import Page from "./components/routing/Page";
@@ -100,7 +101,7 @@ const App = () => {
       return;
     }
 
-    provider.on("close", () => resetApp());
+    provider.on("disconnect", () => resetApp());
 
     provider.on("accountsChanged", async (accounts) => {
       setAddress(accounts[0]);

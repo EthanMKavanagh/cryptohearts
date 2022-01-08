@@ -9,6 +9,11 @@ export const mintArr = [
     answer:
       "In order to purchase a CryptoHeart NFT, you will need to conduct two important steps. First, you will need to purchase ETH from a crypto-currency exchange such as Coinbase, Gemini, or Binance. Once you have completed that step, you will need to transfer your ETH into a non-custodial digital wallet like MetaMask, Portis or WalletConnect compatible wallets. These wallets connect to the CryptoHeart website and allow you to purchase an NFT.",
   },
+  {
+    question: 'Video tutorial on "How to setup an NFT wallet."',
+    answer: "",
+    link: "https://www.youtube.com/watch?v=DNXhxraVaKM",
+  },
 ];
 
 export const projectArr = [
@@ -39,6 +44,7 @@ export const projectArr = [
   {
     question: "What is the licensing for the project?",
     answer:
-      "All the art in this project is covered by the NFT License. You can find more information here: https://www.nftlicense.org/",
+      "All the art in this project is covered by the NFT License. You can find more information here:",
+    link: "https://www.nftlicense.org/",
   },
 ];

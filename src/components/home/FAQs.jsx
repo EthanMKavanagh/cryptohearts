@@ -48,14 +48,15 @@ const FAQs = () => {
         <div className="accordion-content" aria-expanded={!mintActive}>
           {mintArr.map((item) => (
             <div className="accordion-item" key={item.answer}>
-              <div
-                className="question-text"
-                dangerouslySetInnerHTML={{ __html: item.question }}
-              />
-              <div
-                className="answer-text"
-                dangerouslySetInnerHTML={{ __html: item.answer }}
-              />
+              <div className="question-text">{item.question}</div>
+              <div className="answer-text">
+                {item?.answer}{" "}
+                {item?.link && (
+                  <a href={item?.link} target="_blank" rel="noreferrer">
+                    https://www.youtube.com/
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -77,14 +78,15 @@ const FAQs = () => {
         <div className="accordion-content" aria-expanded={!projectActive}>
           {projectArr.map((item) => (
             <div className="accordion-item" key={item.answer}>
-              <div
-                className="question-text"
-                dangerouslySetInnerHTML={{ __html: item.question }}
-              />
-              <div
-                className="answer-text"
-                dangerouslySetInnerHTML={{ __html: item.answer }}
-              />
+              <div className="question-text">{item.question}</div>
+              <div className="answer-text">
+                {item?.answer}{" "}
+                {item?.link && (
+                  <a href={item?.link} target="_blank" rel="noreferrer">
+                    {item?.link}
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import abi from "../../helpers/contractABI.json";
 import { useRecoilState } from "recoil";
-import { currentAddressState } from "../../state";
+import { currentAddressState, currentNetworkId } from "../../state";
 import Select from "react-select";
 
 const mintOptions = [
@@ -56,6 +56,7 @@ const LoaderSVG = (wid, color = "#ef640777") => (
 const MintModal = ({ data }) => {
   const [mintAmount, setMintAmount] = useState(1);
   const [address] = useRecoilState(currentAddressState);
+  const [networkId] = useRecoilState(currentNetworkId);
 
   const [mintLoading, setMintLoading] = useState(false);
   const [nftContract, setNftContract] = useState(null);
@@ -63,6 +64,14 @@ const MintModal = ({ data }) => {
   const [maxSupply, setMaxSupply] = useState(null);
   const [message, setMessage] = useState(null);
   const [err, setErr] = useState(null);
+
+  useEffect(() => {
+    if (networkId !== 1) {
+      setErr("Make sure you are on Ethereum Mainnet");
+    } else {
+      setErr(null);
+    }
+  }, [data?.address, networkId]);
 
   useEffect(() => {
     const getContract = async () => {
@@ -85,7 +94,7 @@ const MintModal = ({ data }) => {
     };
 
     getContract();
-  }, [data?.address]);
+  }, [data?.address, networkId]);
 
   const closeModal = (e) => {
     if (e.target.classList[0] === "mint-modal") {
@@ -137,10 +146,10 @@ const MintModal = ({ data }) => {
       } else if (err.code === 4001) {
         setErr("User denied transaction");
       } else {
-        setErr("Error");
+        setErr("Unexpected error");
       }
 
-      console.log(err);
+      console.error(err);
     }
   };
 

@@ -17,7 +17,7 @@ export const artistsArr = [
     name: "Ali Shahrouzi",
     bio: [
       "My name is Ali Shahrouzi.",
-      "Ali Shahrouzi is a fine-art photographer who has dedicated most of his life to photography. He has always been interested in the arts and began experimenting with painting and photography at around 15 years old. Eventually, the camera took the place of the paint brush because it have him more visual control of his expression. His interest in photography began in HIgh School, as he spent many hours in the darkroom printing. One thing led to another, and soon Ali was offered a scholarship to attend Brooks Institute of Photography in Santa Barbara, California. Since then, his work has been published in many national and international publications, including Popular Photography, Petersen's Photographic, Rangefinder, Santa Barbara Destination Guide, and many more.",
+      "Ali Shahrouzi is a fine-art photographer who has dedicated most of his life to photography. He has always been interested in the arts and began experimenting with painting and photography at around 15 years old. Eventually, the camera took the place of the paint brush because it have him more visual control of his expression. His interest in photography began in High School, as he spent many hours in the darkroom printing. One thing led to another, and soon Ali was offered a scholarship to attend Brooks Institute of Photography in Santa Barbara, California. Since then, his work has been published in many national and international publications, including Popular Photography, Petersen's Photographic, Rangefinder, Santa Barbara Destination Guide, and many more.",
       "Ali has cerebral palsy, and has no usage of his hands or legs. He is completely wheelchair bound. When he’s behind the camera, he uses an assistant's hands to compose his images while looking through the view finder. The assistant stands by and listens as he directs, “higher, lower, left, right”, waiting for the perfect composition to come into frame. All camera setting decisions are directed and controlled by Ali.",
       "When in the darkroom, all fine art black and white prints are done by hand the traditional way; optically and chemically processed under his supervision every step of the process. All of his black and white fine art silver gelatin prints are done on ilford senimat fiber based paper, and toned selenium, so they last for generations to enjoy.",
     ],
@@ -35,7 +35,7 @@ export const artistsArr = [
       "I like working with acrylic paints on canvas. I like how paint feels when I’m moving it around with a brush and I like to see what I can do with it. I used to paint fish and trees, but now I’m into cats and dogs.",
       "I hope you like my artwork",
     ],
-    image: "marrie.png",
+    image: "marrie.JPG",
     visual1: "marrie1.jpg",
     visual2: "marrie2.jpg",
     visual3: "marrie3.JPG",
