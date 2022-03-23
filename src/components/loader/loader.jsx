@@ -46,7 +46,7 @@ const Loader = ({ size = "10rem", loading, children }) => {
       }}
     >
       <Helmet>
-        <title>Cryptoheart</title>
+        <title>CryptoHeart</title>
       </Helmet>
       {LoaderSVG(size)}
     </div>
