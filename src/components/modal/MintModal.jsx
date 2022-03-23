@@ -204,7 +204,10 @@ const MintModal = ({ data }) => {
                   <ul>
                     <li>10 unique pieces</li>
                     <li>All mints in the same transaction will be different</li>
-                    <li>Redeemable for physicals</li>
+                    <li>
+                      Redeemable for physical prints (Additional costs +
+                      shipping may be required)
+                    </li>
                   </ul>
                 </div>
 
